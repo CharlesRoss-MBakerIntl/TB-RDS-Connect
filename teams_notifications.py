@@ -3,7 +3,7 @@ import json
 
 
 #Report Errors to Teams Notifications Channel
-def teams_notification(channel, type, summary, message):
+def channel_notification(channel, type, summary, message, error = None):
 
     """
     Reports updates in the lambda processing script for the tidal basin projects to a chosen teams channel.  
