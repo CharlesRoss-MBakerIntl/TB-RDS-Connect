@@ -1,7 +1,9 @@
 import psycopg2
-from teams_notifications import channel_notifications
 
-def rds_connection(username, password):
+
+#----------------------------------------------------------------
+
+def rds_connection(username, password, db, server):
     
     """
     Establishes a connection to an AWS RDS database using the provided credentials and notifies a Teams channel in case of connection failure.
@@ -28,11 +30,11 @@ def rds_connection(username, password):
 
         #Connect to the AWS RDS Database
         conn = psycopg2.connect(
-            host = 'tidalbasin-cdbg-dr-fl-ida-backendauroraclusterclus-sefctthwsqmq.ce8xd2bu2edx.us-east-2.rds.amazonaws.com',
+            host = server,
             port = 5432,
             user = username,
             password = password,
-            database= 'tidalbasin'
+            database= db
         )
 
         #Return the Connection Object if Successful
@@ -43,3 +45,54 @@ def rds_connection(username, password):
         
         # Raise Exception to Stop Process if Failure
         raise Exception(f"Failed to Connect to RDS Database: {e}")
+    
+
+
+
+#----------------------------------------------------------------
+
+def sql_query(table_name, columns='*', conditions=None, limit=None):
+    
+    """
+    Build an SQL query for an AWS RDS database.
+
+    :param table_name: The name of the table to query.
+    :param columns: The columns to select (default is all columns '*').
+    :param conditions: The conditions for the WHERE clause (default is None).
+    :param limit: The number of records to limit (default is None).
+    :return: The constructed SQL query as a string.
+    """
+
+    # Start building the query
+    query = f"SELECT {columns} FROM {table_name}"
+
+    # Add conditions if any
+    if conditions:
+        query += f" WHERE {conditions}"
+
+    # Add limit if any
+    if limit:
+        query += f" LIMIT {limit}"
+
+    return query
+
+
+
+
+
+    
+
+#----------------------------------------------------------------
+
+def get_schema():
+    pass
+
+
+
+
+#----------------------------------------------------------------
+
+def rds_sql_pull():
+    pass
+
+
