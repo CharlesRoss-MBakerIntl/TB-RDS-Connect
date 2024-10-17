@@ -1,4 +1,5 @@
 import psycopg2
+import pandas as pd
 
 
 #----------------------------------------------------------------
@@ -37,8 +38,10 @@ def rds_connection(username, password, db, server):
             database= db
         )
 
+        cursor = conn.cursor()
+
         #Return the Connection Object if Successful
-        return conn
+        return conn, cursor
     
 
     except Exception as e:
@@ -90,9 +93,57 @@ def get_schema():
 
 
 
+
+
 #----------------------------------------------------------------
 
-def rds_sql_pull():
-    pass
+def rds_sql_pull(cursor, query):
+
+    """
+    Executes a SQL query using the provided cursor, fetches rows, and converts them to a Pandas DataFrame.
+
+    Parameters:
+    - cursor: Cursor object for database connection.
+    - query: SQL query string to be executed.
+
+    Explanation:
+    This function attempts to execute a SQL query using the given cursor. It fetches all rows from the query result 
+    and then converts these rows into a Pandas DataFrame. If the conversion to a DataFrame fails, an exception is raised, 
+    and the process is stopped to indicate the failure. The function ensures that the SQL query is executed 
+    and its results are correctly transformed into a DataFrame format for further data manipulation or analysis.
+
+    Return:
+    The DataFrame containing the query results if successful.
+
+    Note:
+    Any failure in executing the query or converting the result to a DataFrame triggers an exception, 
+    alerting the user to address the issue promptly.
+    """
+
+    try:
+
+        # Execute Query
+        cursor.execute(query)
+        # Fetch Rows
+        rows = cursor.fetchall()
+
+
+        try:
+        
+            #Convert to Dataframe
+            df = pd.DataFrame(rows)
+            return df
+
+
+        except Exception as e:
+            
+            # Raise Exception to Stop Process if Failure
+            raise Exception(f"Rows Pulled from Cursor, Failed to Convert to Pandas Dataframe: {e}")
+
+
+    except Exception as e:
+
+        # Raise Exception to Stop Process if Failure
+        raise Exception(f"Failed to Pull Rows from Cursor Query Execute: {e}")
 
 
