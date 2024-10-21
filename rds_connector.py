@@ -83,6 +83,31 @@ def sql_query(table_name, columns='*', conditions=None, limit=None):
 
 
 
+#----------------------------------------------------------------
+
+def list_tables(cursor):
+    
+    # Execute the query to get all table names
+    cursor.execute("""
+        SELECT table_name 
+        FROM information_schema.tables 
+        WHERE table_schema = 'public'
+    """)
+
+    # Fetch all table names
+    tables = cursor.fetchall()
+
+    # Create Empty List
+    table_lst = []
+
+    # Print the table names
+    for table in tables:
+        table_lst.append(table[0])
+
+    return table_lst
+
+
+
     
 
 #----------------------------------------------------------------
@@ -124,6 +149,8 @@ def rds_sql_pull(cursor, query):
 
         # Execute Query
         cursor.execute(query)
+        # Fetch Columns
+        columns = [col[0] for col in cursor.description]
         # Fetch Rows
         rows = cursor.fetchall()
 
@@ -131,7 +158,7 @@ def rds_sql_pull(cursor, query):
         try:
         
             #Convert to Dataframe
-            df = pd.DataFrame(rows)
+            df = pd.DataFrame(rows, columns=columns)
             return df
 
 
