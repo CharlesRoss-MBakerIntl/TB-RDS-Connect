@@ -174,3 +174,197 @@ def rds_sql_pull(cursor, query):
         raise Exception(f"Failed to Pull Rows from Cursor Query Execute: {e}")
 
 
+
+
+
+#----------------------------------------------------------------
+
+class RDSTablePull:
+    
+    """
+    RDSTablePull is a class to handle database queries and data schema validation.
+    
+    Attributes:
+    -----------
+    conn : connection object
+        Connection to the database.
+    cursor : cursor object
+        Cursor for executing database queries.
+    query : str
+        SQL query to be executed.
+    schema : list
+        List of expected columns in the dataframe.
+    df : pandas.DataFrame
+        DataFrame to hold query results.
+    fields_missing : list
+        List of missing fields if schema does not match.
+
+    Methods:
+    --------
+    check_schema(df):
+        Validates if the dataframe matches the user provided schema.
+
+    update_field_names(table_fields, new_fields):
+        Updates the column names in the dataframe with user provided field names.
+
+    query_to_df(update_col=False, table_fields=None, new_fields=None):
+        Executes the SQL query and updates the dataframe with the results, checks 
+        schema and updates fields if selected.
+    """
+
+
+    def __init__(self, conn, cursor, query, schema):
+        self.conn = conn
+        self.cursor = cursor
+        self.query = query
+        self.schema = schema
+        self.df = pd.DataFrame()
+        self.fields_missing = []
+        
+
+
+    def check_schema(self, df):
+
+        """
+        Check if the dataframe matches the user provided schema passed to the class. This schema 
+        is a list of field names that the user needs to ensure is in the resulting dataframe pull
+        from the SQL Database.
+        
+        Parameters:
+        -----------
+        df : pandas.DataFrame
+            Dataframe to check.
+        
+        Returns:
+        --------
+        bool
+            True if schema matches, else False.
+        
+        Raises:
+        -------
+        Exception
+            If dataframe is empty.
+        """
+
+        #Set Check
+        check = True
+        
+        #Check if DF Empty
+        if df.empty == False:
+        
+            #Check if Fields Exist in DF
+            for field in self.schema:
+                if field not in df.columns:
+                    
+                    #Field not Found, Set Check to False and Add Missing Field to List
+                    check = False
+                    self.fields_missing.append(field)
+
+        else:
+            raise Exception("Error: Dataframe Empty When Checking Schema")
+
+        return check
+    
+
+    
+    def update_field_names(self, table_fields, new_fields):
+
+        """
+        Update column names in the dataframe.  User provides list of fields that need to be updated in the
+        table and a list of fields names that they need to be updated to.  The fields must match in each list.
+        
+        Parameters:
+        -----------
+        table_fields : list
+            Current column names.
+        new_fields : list
+            New column names.
+        
+        Raises:
+        -------
+        Exception
+            If dataframe is empty or rename fails.
+        """
+        
+        #Create Dictionary for Fields Update
+        field_dict = dict(zip(table_fields, new_fields))
+
+        #Update Fields
+        for table_field, new_field in field_dict.items():
+
+            if self.df.empty == False :
+            
+                try:
+                    #Update the Column Name
+                    self.df.rename(columns={table_field: new_field}, inplace=True)
+
+                except Exception as e:
+                    raise Exception(f"Failure to Convert {table_field} to {new_field}")
+    
+            else:
+                raise Exception("Error: Cannot Rename Columns of Empty Dataframe")
+
+
+
+    def query_to_df(self, update_col = False, table_fields = None, new_fields = None):
+        
+        """
+        Execute the SQL query and update the dataframe with the results, optionally renaming columns.
+        
+        Parameters:
+        -----------
+        update_col : bool, optional
+            Whether to update column names based on provided lists (default is False).
+        table_fields : list of str, optional
+            Current column names in the dataframe. Required if update_col is True.
+        new_fields : list of str, optional
+            New column names to update to. Required if update_col is True.
+
+        Returns:
+        --------
+        pandas.DataFrame
+            DataFrame containing the results of the executed SQL query.
+
+        Raises:
+        -------
+        Exception
+            If the dataframe is empty after executing the query.
+            If the dataframe schema does not match the expected schema.
+            If there is an error updating column names when update_col is True.
+        
+        Notes:
+        ------
+        This method pulls data from an RDS instance using the specified SQL query,
+        checks the resulting dataframe against the provided schema, and optionally 
+        updates the column names. It ensures that the dataframe is neither empty nor 
+        incorrectly structured before returning the updated dataframe.
+        """
+        
+        #Update DataFrame with SQL Query
+        data = rds_sql_pull(self.cursor, self.query)
+
+        #Check if Data Empty
+        if data.empty == False:
+            #Check Schema
+            if self.check_schema(data):
+                
+                #Update DF with Data
+                self.df = data
+
+                #If Selected, Update Columns
+                if update_col == True:
+                    self.update_field_names(table_fields, new_fields)
+
+                #Return DataFrame
+                return self.df
+            
+            else:
+                print(f'Missing Fields from Table:  {self.fields_missing}')
+                raise Exception("Error: DataFrame Schema Did Not Match, Check fields_missing()")
+            
+        else:
+            raise Exception("Error: DataFrame Emtpy from SQL Query")
+
+        
+
+    
