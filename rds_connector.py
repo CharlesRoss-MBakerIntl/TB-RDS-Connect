@@ -53,77 +53,6 @@ def rds_connection(username, password, db, server):
 
 
 
-#----------------------------------------------------------------
-
-def sql_query(source, join_list):
-    
-    #Set Count for Join Sections
-    join_count = 1
-
-    #Initialize Query Select
-    query = "SELECT\n"
-
-    #Add Fields from Source
-    for field in source['fields']:
-        for tn, jn in field.items():
-            query += f"    {source['name']}.{tn} AS {jn},\n"
-
-
-    # Add Fields from Joins
-    for index, item in enumerate(join_list):
-        # Add Join Segments
-        for field in item['fields']:
-            for tn, jn in field.items():
-                if index == len(join_list) - 1 and field == item['fields'][-1]:
-                    query += f"    {item['name']}.{tn} AS {jn}\n"
-                else:
-                    query += f"    {item['name']}.{tn} AS {jn},\n"
-                
-                
-                
-                
-
-
-    #Add Source
-    query += "\nFROM\n"
-    query += f"    {source['table']} {source['name']}\n"
-
-
-    #Add Joins
-    for index, item in enumerate(join_list):
-        
-        if index == 0:
-            data_conn = 'initial_join_answers'
-        else:
-            data_conn = f'join_answers_{join_count}'
-            join_count += 1
-
-        if item['question_source'] == "JOIN_SOURCE":
-            question_source = source['name']
-
-        elif item['question_source'] == "DATA_SOURCE":
-            question_source = 'initial_join_answers'
-        
-        query += f"\nLEFT JOIN application_data_answer {data_conn} ON {question_source}.{item['source_id']} = {data_conn}.{item['join_id']} AND {data_conn}.question_id = {item['question_id']}"
-        query += f"\nLEFT JOIN {item['data_source']} {item['name']} ON {data_conn}.id = {item['name']}.answer_ptr_id\n"
-
-
-    #Filter Project
-    query += "\n WHERE \n"
-    query += f"    {source['name']}.project_id = {source['project']}"
-
-    #Order Project
-    query += "\n ORDER BY\n"
-    query += f"{source['name']}.{source['order']};"
-    
-        
-    #Encode String
-    query = codecs.decode(query.encode(), 'unicode_escape')
-
-
-    return query
-
-
 
 #----------------------------------------------------------------
 
@@ -147,6 +76,119 @@ def list_tables(cursor):
         table_lst.append(table[0])
 
     return table_lst
+    
+
+
+
+
+
+#----------------------------------------------------------------
+
+def build_query(source = None, join_list = None, query = None):
+    
+    #If Source and Join List Passed, Query 
+    if (query == None) & (source != None) & (join_list != None):
+        
+        #Set Count for Join Sections
+        join_count = 1
+
+        #Initialize Query Select
+        query = "SELECT\n"
+
+        #Add Fields from Source
+        try:
+            for field in source['fields']:
+                for tn, jn in field.items():
+                    query += f"    {source['name']}.{tn} AS {jn},\n"
+
+        except Exception as e:
+            raise Exception(f"Error: Could not pull fields from Source, check Source data package.  Traceback: {e}")
+
+
+
+        # Add Fields from Joins
+        try:
+            for index, item in enumerate(join_list):
+                # Add Join Segments
+                for field in item['fields']:
+                    for tn, jn in field.items():
+                        if index == len(join_list) - 1 and field == item['fields'][-1]:
+                            query += f"    {item['name']}.{tn} AS {jn}\n"
+                        else:
+                            query += f"    {item['name']}.{tn} AS {jn},\n"
+
+        except Exception as e:
+            raise Exception(f"Error: Could not pull fields from Join List, check Join List data package.  Traceback: {e}")
+
+
+
+        #Add Source
+        try:
+            query += "\nFROM\n"
+            query += f"    {source['table']} {source['name']}\n"
+        
+        except Exception as e:
+            raise Exception(f"Error: Could not pull source table or name from Source data package.  Traceback: {e}")
+
+
+
+        #Add Joins
+        try:
+            for index, item in enumerate(join_list):
+                
+                if index == 0:
+                    data_conn = 'initial_join_answers'
+                else:
+                    data_conn = f'join_answers_{join_count}'
+                    join_count += 1
+
+                if item['question_source'] == "JOIN_SOURCE":
+                    question_source = source['name']
+
+                elif item['question_source'] == "DATA_SOURCE":
+                    question_source = 'initial_join_answers'
+                
+                query += f"\nLEFT JOIN application_data_answer {data_conn} ON {question_source}.{item['source_id']} = {data_conn}.{item['join_id']} AND {data_conn}.question_id = {item['question_id']}"
+                query += f"\nLEFT JOIN {item['data_source']} {item['name']} ON {data_conn}.id = {item['name']}.answer_ptr_id\n"
+
+        except Exception as e:
+            raise Exception(f"Error: Could not pull join information from join list, check join list data package.  Traceback: {e}")
+
+
+
+        #Filter Project
+        try:
+            query += "\n WHERE \n"
+            query += f"    {source['name']}.project_id = {source['project']}"
+
+        except:
+            raise Exception(f"Error: Could not apply project filter to query.  Traceback: {e}")
+
+
+
+        #Order Project
+        try:
+            query += "\n ORDER BY\n"
+            query += f"{source['name']}.{source['order']};"
+        
+        except:
+            raise Exception(f"Error: Could not apply order operations to query.  Traceback: {e}")
+        
+            
+        #Encode String
+        query = codecs.decode(query.encode(), 'unicode_escape')
+
+
+
+    # If Query Passed, Pass Back Query
+    elif (query != None) & (source == None) & (join_list == None):
+        query = query
+
+
+    #Return Query
+    return query
+
+
 
 
 
@@ -161,18 +203,23 @@ def build_schema(source = None, join_list = None, schema = None, exclude = None)
 
     #If Source and Join List Data Present
     if (schema == None) & (source != None) & (join_list != None):
-    
-        #Add Fields from Source
-        for field in source['fields']:
-            for tn, jn in field.items():
-                schema_lst.append(jn)
-
-
-        # Add Fields from Joins
-        for item in join_list:
-            for field in item['fields']:
+        
+        try:
+            #Add Fields from Source
+            for field in source['fields']:
                 for tn, jn in field.items():
-                        schema_lst.append(jn)
+                    schema_lst.append(jn)
+
+
+            # Add Fields from Joins
+            for item in join_list:
+                for field in item['fields']:
+                    for tn, jn in field.items():
+                            schema_lst.append(jn)
+    
+        except Exception as e:
+            raise Exception(f"Error: Could not build schema from source or join list, check data packages.  Traceback: {e}")
+
 
     #If Source Manually Passed Into Function
     elif (schema != None) & (source == None) & (join_list == None):
@@ -182,8 +229,27 @@ def build_schema(source = None, join_list = None, schema = None, exclude = None)
     if exclude != None:
         schema_lst = [field for field in schema_lst if field not in exclude]
 
-
+    #Return Schema List
     return schema_lst
+
+
+
+
+
+
+
+
+
+#----------------------------------------------------------------
+
+def build_clean_list(source = None, join_list = None, schema = None, exclude = None):
+
+    pass
+
+
+
+
+
 
 
 
@@ -284,11 +350,11 @@ class RDSTablePull:
     def __init__(self, conn, cursor, query = None, source = None, join_list = None, schema = None, exclude = None):
         self.conn = conn
         self.cursor = cursor
-        self.query = query
         self.source = source
         self.join_list = join_list
         self.schema = build_schema(source, join_list, schema, exclude)
-        self.clean_list = []
+        self.query = build_query(query, source, join_list)
+        self.clean_list = build_clean_list()
         self.df = pd.DataFrame()
         self.fields_missing = []
         
@@ -337,66 +403,17 @@ class RDSTablePull:
         return check
     
 
-    def build_query(self):
-        
-        #If Query None
-        if self.query == None:
-            try:
-                query = sql_query(self.source, self.join_list)
-                return query 
-            
-            except Exception as e:
-                raise Exception(f"Error: Could not build query from source and join list. {e}")
 
-        #Return Query if Present
-        elif self.query != None:
-            return self.query
-    
 
     def clean_table(self):
         pass
 
 
-    def update_field_names(self, table_fields, new_fields):
-
-        """
-        Update column names in the dataframe.  User provides list of fields that need to be updated in the
-        table and a list of fields names that they need to be updated to.  The fields must match in each list.
-        
-        Parameters:
-        -----------
-        table_fields : list
-            Current column names.
-        new_fields : list
-            New column names.
-        
-        Raises:
-        -------
-        Exception
-            If dataframe is empty or rename fails.
-        """
-        
-        #Create Dictionary for Fields Update
-        field_dict = dict(zip(table_fields, new_fields))
-
-        #Update Fields
-        for table_field, new_field in field_dict.items():
-
-            if self.df.empty == False :
-            
-                try:
-                    #Update the Column Name
-                    self.df.rename(columns={table_field: new_field}, inplace=True)
-
-                except Exception as e:
-                    raise Exception(f"Failure to Convert {table_field} to {new_field}")
     
-            else:
-                raise Exception("Error: Cannot Rename Columns of Empty Dataframe")
 
 
 
-    def query_to_df(self, update_col = False, table_fields = None, new_fields = None):
+    def query_to_df(self, clean = False):
         
         """
         Execute the SQL query and update the dataframe with the results, optionally renaming columns.
@@ -430,30 +447,32 @@ class RDSTablePull:
         incorrectly structured before returning the updated dataframe.
         """
         
-        #Build Query 
-        query = self.build_query()
+        if (self.query != None) & (self.schema != None):
 
-        #Update DataFrame with SQL Query
-        data = rds_sql_pull(self.cursor, query)
+            #Update DataFrame with SQL Query
+            data = rds_sql_pull(self.cursor, self.query)
 
-        #Check if Data Empty
-        if data.empty == False:
-            #Check Schema
-            if self.check_schema(data):
+            #Check if Data Empty
+            if data.empty == False:
+                #Check Schema
+                if self.check_schema(data):
+                    
+                    #Update DF with Data
+                    self.df = data
+
+                    #If Selected, Update Columns
+                    if clean == True:
+                        self.clean_table()
+
+                    #Return DataFrame
+                    return self.df
                 
-                #Update DF with Data
-                self.df = data
-
-                #If Selected, Update Columns
-                if update_col == True:
-                    self.update_field_names(table_fields, new_fields)
-
-                #Return DataFrame
-                return self.df
-            
+                else:
+                    print(f'Missing Fields from Table:  {self.fields_missing}')
+                    raise Exception("Error: DataFrame Schema Did Not Match, Check fields_missing()")
+                
             else:
-                print(f'Missing Fields from Table:  {self.fields_missing}')
-                raise Exception("Error: DataFrame Schema Did Not Match, Check fields_missing()")
+                raise Exception("Error: DataFrame Emtpy from SQL Query")
             
         else:
             raise Exception("Error: DataFrame Emtpy from SQL Query")
