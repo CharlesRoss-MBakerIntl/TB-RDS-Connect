@@ -1,5 +1,6 @@
 import psycopg2
 import pandas as pd
+import codecs
 
 
 #----------------------------------------------------------------
@@ -54,32 +55,73 @@ def rds_connection(username, password, db, server):
 
 #----------------------------------------------------------------
 
-def sql_query(table_name, columns='*', conditions=None, limit=None):
+def sql_query(source, join_list):
     
-    """
-    Build an SQL query for an AWS RDS database.
+    #Set Count for Join Sections
+    join_count = 1
 
-    :param table_name: The name of the table to query.
-    :param columns: The columns to select (default is all columns '*').
-    :param conditions: The conditions for the WHERE clause (default is None).
-    :param limit: The number of records to limit (default is None).
-    :return: The constructed SQL query as a string.
-    """
+    #Initialize Query Select
+    query = "SELECT\n"
 
-    # Start building the query
-    query = f"SELECT {columns} FROM {table_name}"
+    #Add Fields from Source
+    for field in source['fields']:
+        for tn, jn in field.items():
+            query += f"    {source['name']}.{tn} AS {jn},\n"
 
-    # Add conditions if any
-    if conditions:
-        query += f" WHERE {conditions}"
 
-    # Add limit if any
-    if limit:
-        query += f" LIMIT {limit}"
+    # Add Fields from Joins
+    for index, item in enumerate(join_list):
+        # Add Join Segments
+        for field in item['fields']:
+            for tn, jn in field.items():
+                if index == len(join_list) - 1 and field == item['fields'][-1]:
+                    query += f"    {item['name']}.{tn} AS {jn}\n"
+                else:
+                    query += f"    {item['name']}.{tn} AS {jn},\n"
+                
+                
+                
+                
+
+
+    #Add Source
+    query += "\nFROM\n"
+    query += f"    {source['table']} {source['name']}\n"
+
+
+    #Add Joins
+    for index, item in enumerate(join_list):
+        
+        if index == 0:
+            data_conn = 'initial_join_answers'
+        else:
+            data_conn = f'join_answers_{join_count}'
+            join_count += 1
+
+        if item['question_source'] == "JOIN_SOURCE":
+            question_source = source['name']
+
+        elif item['question_source'] == "DATA_SOURCE":
+            question_source = 'initial_join_answers'
+        
+        query += f"\nLEFT JOIN application_data_answer {data_conn} ON {question_source}.{item['source_id']} = {data_conn}.{item['join_id']} AND {data_conn}.question_id = {item['question_id']}"
+        query += f"\nLEFT JOIN {item['data_source']} {item['name']} ON {data_conn}.id = {item['name']}.answer_ptr_id\n"
+
+
+    #Filter Project
+    query += "\n WHERE \n"
+    query += f"    {source['name']}.project_id = {source['project']}"
+
+    #Order Project
+    query += "\n ORDER BY\n"
+    query += f"{source['name']}.{source['order']};"
+    
+        
+    #Encode String
+    query = codecs.decode(query.encode(), 'unicode_escape')
+
 
     return query
-
-
 
 
 
@@ -112,10 +154,36 @@ def list_tables(cursor):
 
 #----------------------------------------------------------------
 
-def get_schema():
-    pass
+def build_schema(source = None, join_list = None, schema = None, exclude = None):
+
+    # Create Empty Schema List
+    schema_lst = []
+
+    #If Source and Join List Data Present
+    if (schema == None) & (source != None) & (join_list != None):
+    
+        #Add Fields from Source
+        for field in source['fields']:
+            for tn, jn in field.items():
+                schema_lst.append(jn)
 
 
+        # Add Fields from Joins
+        for item in join_list:
+            for field in item['fields']:
+                for tn, jn in field.items():
+                        schema_lst.append(jn)
+
+    #If Source Manually Passed Into Function
+    elif (schema != None) & (source == None) & (join_list == None):
+        schema_lst = schema
+
+    #Filter Schema List
+    if exclude != None:
+        schema_lst = [field for field in schema_lst if field not in exclude]
+
+
+    return schema_lst
 
 
 
@@ -213,11 +281,14 @@ class RDSTablePull:
     """
 
 
-    def __init__(self, conn, cursor, query, schema):
+    def __init__(self, conn, cursor, query = None, source = None, join_list = None, schema = None, exclude = None):
         self.conn = conn
         self.cursor = cursor
         self.query = query
-        self.schema = schema
+        self.source = source
+        self.join_list = join_list
+        self.schema = build_schema(source, join_list, schema, exclude)
+        self.clean_list = []
         self.df = pd.DataFrame()
         self.fields_missing = []
         
@@ -266,7 +337,26 @@ class RDSTablePull:
         return check
     
 
+    def build_query(self):
+        
+        #If Query None
+        if self.query == None:
+            try:
+                query = sql_query(self.source, self.join_list)
+                return query 
+            
+            except Exception as e:
+                raise Exception(f"Error: Could not build query from source and join list. {e}")
+
+        #Return Query if Present
+        elif self.query != None:
+            return self.query
     
+
+    def clean_table(self):
+        pass
+
+
     def update_field_names(self, table_fields, new_fields):
 
         """
@@ -340,8 +430,11 @@ class RDSTablePull:
         incorrectly structured before returning the updated dataframe.
         """
         
+        #Build Query 
+        query = self.build_query()
+
         #Update DataFrame with SQL Query
-        data = rds_sql_pull(self.cursor, self.query)
+        data = rds_sql_pull(self.cursor, query)
 
         #Check if Data Empty
         if data.empty == False:
