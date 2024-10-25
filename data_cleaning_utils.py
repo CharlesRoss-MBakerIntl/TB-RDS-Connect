@@ -9,6 +9,9 @@ def clean_empty_none(field, df):
     #Create Empty DataFrame
     cleaned_df = pd.DataFrame()
 
+    #Create Capture for Removed Rows
+    removed_df = pd.DataFrame()
+
     
     if field not in df.columns:
         raise Exception(f"Error: {field} Not In DataFrame")
@@ -29,8 +32,29 @@ def clean_empty_none(field, df):
             if add_check == True:
                 cleaned_df = pd.concat([cleaned_df, pd.DataFrame(row).T])
 
+            elif add_check == False:
+                removed_df = pd.concat([removed_df, pd.DataFrame(row).T])
+
         except Exception as e:
             raise Exception(f'Error: Failed to Add Row to Cleaned DataFrame {e}')
+
+
+    return cleaned_df, removed_df
+
+
+
+
+def convert_dates(field, df):
+    
+    #Create Empty DataFrame
+    cleaned_df = pd.DataFrame()
+
+    #Check if Field in DataFrame
+    if field not in df.columns:
+        raise Exception(f"Error: {field} Not In DataFrame")
+
+
+    #Convert Field
 
 
     return cleaned_df
