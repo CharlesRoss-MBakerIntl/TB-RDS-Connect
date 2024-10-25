@@ -1,0 +1,458 @@
+,application_number,created_at,hotel_name,hotel_address_line_1,hotel_address_line_2,hotel_city,hotel_state,hotel_zip,hotel_status,license_in,license_out,total_in_household
+12,W4HR84B7CJ,2024-10-01 21:35:44.197400+00:00,Mint House St. Petersburg,77 11th St N,,St. Petersburg,FL,33705,Booked,2024-10-13,2024-10-31,5.00
+13,6YR8ZVBWX5,2024-10-01 21:48:45.294388+00:00,Holiday Inn Express Inverness,903 E Gulf To Lake Hwy,,Lecanto,FL,34461,Booked,2024-10-21,2024-11-20,1.00
+28,V4SXRZA6TY,2024-10-01 22:56:35.319499+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center),,Lutz,FL,33558,Rejected,2024-11-01,,1.00
+30,UKJUNZB34N,2024-10-01 22:58:42.677192+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-17,2024-11-16,1.00
+34,NZMT3PHSSF,2024-10-01 23:06:37.062397+00:00,Days Inn by Wyndham St. Petersburg / Tampa Bay Area,5005 34th Street,,North St. Petersburg,FL,33714,Booked,2024-10-19,2024-11-18,2.00
+42,4APLDUHURU,2024-10-01 23:16:40.909211+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-15,2024-11-14,3.00
+45,7WCBE9R2TW,2024-10-01 23:21:04.874008+00:00,Comfort Inn & Suites Northeast - Gateway,875 94th Avenue North,,St Petersburg,FL,33702,Booked,2024-10-21,2024-11-16,3.00
+46,7WCBE9R2TW,2024-10-01 23:21:04.874008+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd.,,Clearwater,FL,33762,Rejected,2024-10-16,2024-11-14,3.00
+50,H45KWE3ABM,2024-10-01 23:30:23.150196+00:00,Econo Lodge Crystal River,2575 Suncoast Blvd US 19,,Crystal River,FL,34428,Booked,2024-10-20,2024-11-19,4.00
+51,KUPFU75HMV,2024-10-01 23:32:23.752267+00:00,Residence Inn Suncoast Parkway at Northpointe Village,2101 Northpointe Parkway,,Lutz,FL,33558,Booked,2024-11-01,2024-12-01,2.00
+55,Q7WDZN9SD3,2024-10-01 23:34:47.971455+00:00,Extended Stay America Premier Suites Port Charlotte I75,24100 Beatrix Blvd,,Port Charlotte,FL,33954,Moved Out,2024-10-06,2024-10-12,2.00
+61,J32AKA7PCS,2024-10-01 23:37:18.841906+00:00,Comfort Suites Clearwater - Dunedin,1941 Edgewater Dr,,Clearwater,FL,33755,Moved Out,2024-10-15,2024-10-24,4.00
+66,4LTDVC9UQM,2024-10-01 23:39:35.267372+00:00,Extended Stay America Select Suites,5401 E Beaumont Center Blvd,,Tampa,FL,33634,Rejected,,,3.00
+88,C4RABDW9UU,2024-10-01 23:53:56.335143+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,St. Petersburg,FL,33714,Booked,2024-10-21,,4.00
+89,C4RABDW9UU,2024-10-01 23:53:56.335143+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,St. Petersburg,FL,33714,Booked,2024-10-21,,4.00
+90,C4RABDW9UU,2024-10-01 23:53:56.335143+00:00,Tarpon Inn,110 West Tarpon Avenue,,Tarpon Springs,FL,34689,Moved Out,2024-10-14,2024-10-21,4.00
+97,NK27RSSUGN,2024-10-01 23:56:44.414434+00:00,Quailty Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,2024-11-18,2.00
+101,FEKZEZBSMM,2024-10-01 23:58:22.645514+00:00,Quality Inn St Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+105,BWJVKLXBBF,2024-10-01 23:59:53.679147+00:00,Rodeway Inn,4076 S Suncoast Blvd,,Homosassa,FL,34446,Booked,2024-10-22,2024-11-21,2.00
+106,BWJVKLXBBF,2024-10-01 23:59:53.679147+00:00,Roadway Inn,4076 S Suncoast Blvd,,Homosassa,FL,34446,Booked,2024-10-06,,2.00
+114,AYYJH5QE47,2024-10-02 00:03:37.690215+00:00,AC Hotel Clearwater,395 Coronado D,,Clearwater Beach,FL,33767,Moved Out,2024-10-04,2024-10-06,3.00
+115,AYYJH5QE47,2024-10-02 00:03:37.690215+00:00,Clarion Inn & Suites Central Clearwater Beach,20967 Us Highway 19 N,,Clearwater,FL,33765,Booked,2024-10-21,2024-11-20,3.00
+119,89TG7HTA5F,2024-10-02 00:05:01.071724+00:00,Eco Lodge Airport at RJ Stadium,4732 N Dale Mabry Hwy,,Tampa,FL,33614,Booked,2024-10-31,2024-11-30,4.00
+123,QA24N6JYR7,2024-10-02 00:07:17.965698+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,4.00
+134,5E3H5VYVYZ,2024-10-02 00:11:13.378752+00:00,Holiday Inn Express Clearwater East,13625 Icot Blvd,,Clearwater,FL,33760,Booked,2024-10-15,,2.00
+137,9GY3VE2LTU,2024-10-02 00:13:01.021379+00:00,SpringHill Suites by Marriott Sarasota Bradenton,1020 University Pkwy,,Sarasota,FL,34234,Booked,2024-10-18,2024-11-18,2.00
+141,UCRSWXVA9J,2024-10-02 00:14:24.421656+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,1.00
+154,V7WUGREJPA,2024-10-02 00:19:41.662173+00:00,Microtel Inn & Suites,4881 Commercial Way,,Spring Hill,FL,34606,Booked,2024-10-15,2024-11-14,2.00
+155,V7WUGREJPA,2024-10-02 00:19:41.662173+00:00,Quality Inn Weeki Wachee,9373 Cortez Blvd,,Weeki Wachee,FL,34613,Moved Out,2024-10-06,2024-10-12,2.00
+163,7NQS838KUW,2024-10-02 00:22:44.666150+00:00,Days Inn by Wyndham Crystal River,2380 NW Hwy 19,,Crystal River,FL,34428,Booked,2024-10-20,,4.00
+168,PMV992KE3X,2024-10-02 00:24:08.858188+00:00,Springhill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,1.00
+170,GH24FBYP3E,2024-10-02 00:25:22.609758+00:00,Staybridge Suites Lakeland West,3855 Don Emerson Drive,,Lakeland,FL,33811,Booked,2024-10-11,,3.00
+171,ACSKNAME9G,2024-10-02 00:26:04.178115+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,St Petersburg,FL,33714,Booked,2024-10-19,,1.00
+181,UV3DDZF7QM,2024-10-02 00:30:27.420549+00:00,Residence Inn,2101 Northpointe Pkwy,,Lutz,FL,33558,Booked,2024-11-01,2024-11-30,5.00
+182,UV3DDZF7QM,2024-10-02 00:30:27.420549+00:00,Residence Inn,2101 Northpointe Pkwy,,Lutz,FL,33558,Booked,2024-11-01,2024-12-01,5.00
+183,RK6QVPBCFE,2024-10-02 00:30:40.441727+00:00,Holiday Inn St. Petersburg,1200 34th Street North,,St Petersburg,FL,33713,Booked,2024-10-13,2024-11-13,4.00
+185,8X89DY82ZV,2024-10-02 00:31:34.160332+00:00,Hampton Inn Rocky Point,3035 N Rocky Point Dr,,Tampa,FL,33607,Booked,2024-10-05,2024-11-17,3.00
+187,EGHMGM5N8Z,2024-10-02 00:31:51.363464+00:00,"Staybridge Suites Tallahassee, an IHG Hotel",1600 Summit Lake Drive,,Tallahassee,FL,32317,Booked,2024-10-25,2024-11-24,5.00
+188,EGHMGM5N8Z,2024-10-02 00:31:51.363464+00:00,"Staybridge Suites Tallahassee, an IHG Hotel",1600 Summit Lake Drive,,Tallahassee,FL,32317,Booked,2024-10-25,2024-11-24,5.00
+192,6VV63YQAZK,2024-10-02 00:32:31.849808+00:00,Quality Inn St. Petersburg North-Tampa Bay,2595 54th Ave North,,Saint Petersburg,FL,33714,Booked,2024-10-19,,2.00
+196,32B7KDRJY3,2024-10-02 00:34:09.644258+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-17,2024-11-16,2.00
+198,MBJ7WA69FQ,2024-10-02 00:35:17.792863+00:00,Extended Stay America Premier Suites,14761 Hope Center Loop,,Fort Myers,FL,33912,Booked,2024-10-16,2024-11-15,6.00
+203,N8WV7T6R3S,2024-10-02 00:36:09.249354+00:00,Hampton Inn & Suites,5460 Gateway Village Cir,,Orlando,FL,32812,Moved Out,2024-10-10,2024-10-14,1.00
+204,N8WV7T6R3S,2024-10-02 00:36:09.249354+00:00,Extended Stay America Suites Saint Petersburg Clearwater,3089 Executive Dr,,Clearwater,FL,33762,Booked,2024-10-14,2024-11-13,1.00
+206,MVF8AP7YSZ,2024-10-02 00:37:32.935675+00:00,"Country Inn & Suites by Radisson, St. Petersburg",8050 US Hwy 19N,,Pinellas Park,FL,33781,Moved Out,2024-10-22,2024-10-23,1.00
+207,MVF8AP7YSZ,2024-10-02 00:37:32.935675+00:00,Pier House 60 Clearwater Beach Marina Hotel,101 Coronado Drive,,Clearwater Beach,FL,33767,Booked,2024-10-23,2024-10-26,1.00
+216,64WZYXXBTN,2024-10-02 00:40:30.333357+00:00,"Holiday Inn Express Crystal River, an IHG Hotel",2380 US-19,,Crystal River,FL,34428,Booked,2024-10-31,2024-11-30,2.00
+217,64WZYXXBTN,2024-10-02 00:40:30.333357+00:00,Days Inn by Wyndham,2575 Suncoast Blvd Us 19,,Crystal River,FL,34428,Booked,2024-10-06,,2.00
+218,64WZYXXBTN,2024-10-02 00:40:30.333357+00:00,Econo Lodge Crystal River,2575 N NW US-19,,Crystal River,FL,34428,Booked,2024-10-15,,2.00
+220,B3EZ3GWK4R,2024-10-02 00:41:23.802520+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,6.00
+221,B3EZ3GWK4R,2024-10-02 00:41:23.802520+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,6.00
+223,WGFHK8HMLY,2024-10-02 00:41:29.914525+00:00,Home2 Suites by Hilton Nokomis Sarasota Casey Key,227 Albee Road West,,Nokomis,FL,34275,Booked,2024-10-18,2024-11-17,2.00
+228,34FCGYX52V,2024-10-02 00:43:09.062236+00:00,Days Inn & Suites,10826 US Highway 19,,Port Richey,FL,34668,Booked,2024-10-06,,2.00
+230,BPYF656J68,2024-10-02 00:44:21.838518+00:00,The Westin Tampa Waterside,725 S Harbour Island,,Tampa,FL,33602,Booked,2024-10-06,,2.00
+232,SNT2KS97ZY,2024-10-02 00:45:20.723491+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-16,2024-11-15,2.00
+238,4P3FWKM8SX,2024-10-02 00:48:30.422220+00:00,SpringHill Suites by Marriott Tampa Suncoast Parkway,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Pending Booking,,,1.00
+241,7DTL5LLPRW,2024-10-02 00:50:14.896676+00:00,"Country Inn & Suites by Radisson, Tampa Airport East-RJ Stadium",4750 N Dale Mabry Hwy,,Tampa,FL,33614,Moved Out,2024-10-17,2024-10-17,3.00
+242,TKLDKQSGF8,2024-10-02 00:50:29.284738+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,3.00
+249,HZZGB594F5,2024-10-02 00:53:00.880532+00:00,TownePlace Suites Tampa Clearwater,21090 U.S. Highway 19 North,,Clearwater,FL,33765,Booked,2024-11-01,,2.00
+258,9S5234P7PT,2024-10-02 00:55:27.615211+00:00,HomeTowne Studios by Red Roof Tampa,6121 West Sitka Street,,Tampa,FL,33634,Booked,2024-10-20,2024-11-18,4.00
+263,XACGU35KAJ,2024-10-02 00:57:50.974504+00:00,HomeTowne Studios by Red Roof Tampa,6121 West Sitka Street,,Tampa,FL,33634,Booked,2024-10-19,,2.00
+270,4WZ8E7ZMH6,2024-10-02 01:03:36.027709+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,"2101 Northpointe Pkwy, Lutz, FL 33558",,Lutz,FL,33558,Booked,2024-11-01,2024-12-01,2.00
+271,7NYPN2HNN3,2024-10-02 01:06:06.786653+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-14,2024-11-13,2.00
+273,TCXNMLB95A,2024-10-02 01:10:52.113344+00:00,Courtyard St. Petersburg Clearwater/Madeira Beach,601 American Legion Dr,,Madeira Beach,FL,33708,Booked,2024-10-17,2024-11-16,5.00
+276,9WWSMGUB8X,2024-10-02 01:23:11.151590+00:00,TownePlace Suites Tampa Clearwater,21090 U.S. Highway 19 North,,Clearwater,FL,33765,Pending Booking,,,3.00
+277,DTV5US4VYY,2024-10-02 01:26:30.135654+00:00,Ramada by Wyndham Venice Hotel Venezia,425 Us Highway 41 Byp N,,Venice,FL,34285,Booked,2024-10-17,2024-11-15,1.00
+283,J9E5DZY9S8,2024-10-02 01:31:34.014582+00:00,Extended Stay America Premier Suites,10623 East Bay Road,,Gibsonton,FL,33534,Booked,2024-10-04,,3.00
+287,VCQ4VQKVGG,2024-10-02 01:35:18.848121+00:00,Mint House St. Petersburg,77 11th St N,,St. Petersburg,FL,33705,Booked,2024-10-21,,1.00
+289,4529VFKTCC,2024-10-02 01:37:04.242631+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center,,Lutz,FL,33558,Booked,2024-11-01,,3.00
+296,96ZTF2NZ7X,2024-10-02 01:43:29.788370+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center),,Lutz,FL,33558,Pending Booking,,,2.00
+299,ZGW7Y8TY9U,2024-10-02 01:46:15.450786+00:00,Rodeway Inn,6826 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-20,2024-11-19,3.00
+322,JASWD24H8D,2024-10-02 02:36:03.695909+00:00,The Hotel Zamora,3701 Gulf Blvd,,St Petersburg,FL,33706,Moved Out,2024-10-06,2024-10-11,1.00
+331,KVQ6BPUKFB,2024-10-02 02:57:59.769787+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center),,Lutz,FL,33558,Booked,2024-11-01,,3.00
+335,TYFPYB8M3M,2024-10-02 03:15:38.771506+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,St Petersburg,FL,33714,Booked,2024-10-19,,5.00
+339,CK32QTGK5A,2024-10-02 12:32:32.929572+00:00,Comfort Inn & Suites,6206 US HWY 19,,New Port Richey,FL,34652,Booked,2024-10-20,2024-11-19,3.00
+340,VPWC3AHMRX,2024-10-02 12:37:24.985712+00:00,Hilton Garden Inn Tampa,2155 Northpointe Pkwy,,Lutz,FL,33558,Moved Out,2024-10-06,2024-10-12,4.00
+341,VPWC3AHMRX,2024-10-02 12:37:24.985712+00:00,Quality Inn & Suites Tarpon Springs South,38724 US Highway 19 North,,Palm Harbor,FL,34689,Booked,2024-10-18,2024-11-17,4.00
+347,AJQ3NLNLMF,2024-10-02 12:46:27.267966+00:00,La Quinta Inn & Suites by Wyndham Clearwater South,5000 Lake Blvd Pinellas Park,,Pinellas Park,FL,33760,Booked,2024-11-01,2024-11-30,7.00
+357,3VYW8A6WBC,2024-10-02 12:58:46.906612+00:00,SpringHill Suites,"16615 Crosspointe Run, Land O' Lakes, FL, 34638",,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,2.00
+359,96RVKKG4NT,2024-10-02 13:00:58.069578+00:00,Clarion Inn & Suites Central Clearwater Beach,"20967 Us Highway 19 N Clearwater, FL, US, 33765",,Clearwater,FL,3376,Booked,2024-10-18,2024-11-18,1.00
+360,299EDJPXT3,2024-10-02 13:01:14.789682+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center),,Lutz,FL,33558,Pending Booking,,,4.00
+365,3JVGL7VG2G,2024-10-02 13:06:28.738176+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54 Ave North,,Saint Petersburg,FL,33714,Booked,2024-10-19,,5.00
+367,EH7FTPB5YT,2024-10-02 13:08:25.005269+00:00,Grand Hyatt Tampa Bay,2900 Bayport Drive,,Tampa,FL,33607,Moved Out,2024-10-06,,5.00
+368,EH7FTPB5YT,2024-10-02 13:08:25.005269+00:00,Grand Hyatt Tampa Bay,2900 Bayport Drive,,Tampa,FL,33607,Moved Out,2024-10-06,,5.00
+369,QMRNRGPFU3,2024-10-02 13:09:17.177575+00:00,TownePlace Suites Tampa Clearwater,21090 U.S. Highway 19 North,,Clearwater,FL,33765,Booked,2024-11-01,,4.00
+377,8Y3FJPMPAM,2024-10-02 13:34:07.012229+00:00,"Homewood Suites by Hilton Tampa - Port Richey, part of Homewood Suites by Hilton",11115 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-19,2024-10-31,2.00
+378,8Y3FJPMPAM,2024-10-02 13:34:07.012229+00:00,"Homewood Suites by Hilton Tampa - Port Richey, part of Homewood Suites by Hilton",11115 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-31,2024-11-30,2.00
+381,DCCA6MHSQ9,2024-10-02 13:42:53.400570+00:00,Sleep Inn & Suites Tampa South,6231 S Dale Mabry Highway,,Tampa,FL,33611,Booked,2024-10-19,,2.00
+382,2SLB3SYK4W,2024-10-02 13:47:12.933690+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center,,Lutz,FL,33558,Booked,,,1.00
+383,QCEFRUVN4L,2024-10-02 13:47:14.232108+00:00,TownePlace Suites Tampa Clearwater,21090 US Highway 19 N,,Clearwater,FL,33765,Booked,2024-11-01,2024-11-30,2.00
+394,2EHH5AH3TC,2024-10-02 14:13:36.139786+00:00,Sleep Inn & Suites Tampa South,6231 S Dale Mabry Highway,,Tampa,FL,33611,Booked,2024-10-18,2024-11-17,1.00
+401,DXN7YFZHA2,2024-10-02 14:31:15.854375+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-15,,2.00
+407,STLG4W7VQN,2024-10-02 14:40:35.249054+00:00,Rodeway Inn,6826 Us Highway 19,,New Port Richey,FL,34625,Booked,2024-10-15,2024-11-15,5.00
+409,KX4W5WEFN9,2024-10-02 14:45:20.209738+00:00,Howard Johnson by Wyndham Clearwater / Dunedin,"27988 Us Highway 19 N Clearwater, FL, US, 33761 (727) 796-0135",,Clearwater,FL,33761,Booked,2024-10-15,2024-11-16,1.00
+410,KX4W5WEFN9,2024-10-02 14:45:20.209738+00:00,Hyatt Place Tampa,26000 Sierra Center Boulevard,,Lutz,FL,33559,Moved Out,2024-10-06,2024-10-12,1.00
+425,XY45DGSY8A,2024-10-02 15:17:25.368429+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th North,,St. Petersburg,FL,33714,Booked,2024-10-19,2024-11-18,3.00
+430,5TAD2DNQFK,2024-10-02 15:24:24.963042+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,4.00
+432,YKRQQHX8TV,2024-10-02 15:27:09.349800+00:00,TownePlace Suites Tampa Clearwater,21090 U.S. Highway 19 North,,C,FL,33765,Booked,2024-11-01,,3.00
+437,34NVXULKN7,2024-10-02 15:35:44.194902+00:00,"Holiday Inn Tampa Westshore - Airport Area, an IHG Hotel",700 N Westshore Blvd,,Tampa,FL,33609,Booked,2024-10-19,2024-11-18,3.00
+445,JA6438LB6S,2024-10-02 15:49:22.834642+00:00,Embassy Suites by Hilton,3705 Spectrum Blvd,,Tampa,FL,33612,Pending Booking,,,
+451,S6339T4QFJ,2024-10-02 16:40:11.781266+00:00,Holiday Inn Express & Suites,10619 US 19,,Port Richey,FL,34668,Booked,2024-10-11,2024-11-10,3.00
+452,KFCAAFK68W,2024-10-02 16:54:31.853937+00:00,Residence Inn St. Petersburg Treasure Island,11908 Gulf Blvd,,Treasure Island,FL,33706,Booked,2024-10-04,2024-11-04,5.00
+462,QXHXCCJKFS,2024-10-02 22:04:52.867710+00:00,Hampton Inn & Suites,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-18,2024-11-17,1.00
+464,4YD7N3922G,2024-10-02 22:07:24.074035+00:00,Quality Inn & Suites Near Fairgrounds Ybor City,4955 E 18th Avenue,,Tampa,FL,33605,Booked,2024-10-20,2024-11-19,4.00
+466,2TCLRNSVRA,2024-10-02 22:10:50.331373+00:00,Hampton Inn Spring Hill,1344 Commercial Way,,Spring Hill,FL,34606,Booked,2024-10-21,2024-11-20,1.00
+468,UAWMY6VTPQ,2024-10-02 22:12:12.879907+00:00,Courtyard St. Petersburg Clearwater/Madeira Beach,601 American Legion Dr,,Madeira Beach,FL,33708,Booked,2024-10-16,2024-11-01,2.00
+472,GWXFF63G5F,2024-10-02 22:15:48.640269+00:00,Days Inn by Wyndham St. Petersburg / Tampa Bay Area,5005 34th Street,,North St. Petersburg,FL,33714,Booked,2024-10-19,2024-11-18,2.00
+482,5F42FLNWEC,2024-10-02 22:39:06.031681+00:00,Quality Inn,2595 54th Ave N,,St. Petersberg,FL,33714,Booked,2024-10-19,,4.00
+487,4EKHRUCE8Q,2024-10-02 22:47:29.672356+00:00,Days Inn by Wyndham,6160 S State Road 53,,Madison,FL,32340,Booked,2024-10-21,,2.00
+507,BB86WJMZ4W,2024-10-02 23:06:49.732062+00:00,Residence Inn Suncoast Parkway at Northpointe Village,2101 Northpoint Parkway,,Lutz,FL,33558,Booked,2024-11-01,,2.00
+517,QV5EXEYJ7C,2024-10-02 23:21:41.529644+00:00,Quality Inn and Conference Center,9331 East Adamo Drive,,Tampa,FL,33619,Booked,2024-10-23,2024-11-22,4.00
+531,X8GXHZMRTJ,2024-10-02 23:45:48.319908+00:00,TownePlace Suites Tampa Clearwater,21090 U.S. Highway 19 North,,Clearwate,FL,33765,Booked,2024-11-01,,2.00
+548,TA7YWQMMTL,2024-10-03 12:54:57.625319+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,2024-11-18,2.00
+558,8W7RRJUSTX,2024-10-03 13:18:38.390677+00:00,Days Inn & Suites by Wyndham Tampa/Raymond James Stadium,5405 N Church Ave,,Tampa,FL,33614,Booked,2024-10-19,2024-11-18,5.00
+559,B2PPQDURRZ,2024-10-03 13:23:07.632771+00:00,Springhill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,6.00
+567,JHKAGCXSSD,2024-10-03 13:53:21.658262+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,3.00
+573,ACRBHBX5MB,2024-10-03 14:11:50.066599+00:00,"Holiday Inn Express & Suites Ruskin, an IHG Hotel",226 Teco Road,,Ruskin,FL,33570,Booked,2024-10-23,2024-11-22,2.00
+576,S5DF5LLXYB,2024-10-03 14:15:30.910579+00:00,TownePlace Suites Tampa Clearwater,21090 US Highway 19 North,,Clearwater,FL,33765,Booked,2024-11-01,,4.00
+588,Q3FUGGVXYE,2024-10-03 14:54:13.601955+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,3.00
+592,VKZDX4P5FM,2024-10-03 15:22:18.492634+00:00,Holiday Inn Express Crystal River,1203 Ne 5th St,,Crystal River,FL,34429,Booked,2024-10-17,,1.00
+593,NYWAXJDREK,2024-10-03 15:22:58.830631+00:00,Springhill Suites by Marriott Tampa Suncoast Parkway,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,3.00
+598,CTD5KQPCMA,2024-10-03 16:37:52.477519+00:00,Hampton Inn & Suites,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-16,2024-11-15,1.00
+601,LYDT3W7FEH,2024-10-03 16:45:32.013236+00:00,"Holiday Inn Express & Suites Ruskin, an IHG Hotel",226 Teco Road,,Ruskin,FL,33570,Booked,2024-10-30,2024-11-29,3.00
+606,NXWPWCYHQX,2024-10-03 18:27:42.702877+00:00,Hampton Inn & Suites,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-20,2024-11-19,4.00
+608,6A5JKDLP2Q,2024-10-03 18:28:41.966154+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-15,2024-11-14,1.00
+609,6A5JKDLP2Q,2024-10-03 18:28:41.966154+00:00,Quality Inn Weeki Wachee,9373 Cortez Blvd,,Weeki Wachee,FL,34613,Moved Out,2024-10-06,2024-10-12,1.00
+616,JVRG6ZUXBW,2024-10-03 18:43:34.625861+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,St Petersburg,FL,33714,Booked,2024-10-19,,1.00
+617,HR26YU6ET5,2024-10-03 18:47:59.558711+00:00,Residence Inn Suncoat Parkway At Northpointe Village,2101 Northpointe Parkway,,Lutz,FL,33558,Booked,2024-11-01,,2.00
+624,P2CSVXWSJJ,2024-10-03 19:20:15.227484+00:00,Ramada by Wyndham Venice Hotel Venezia,425 Us Highway 41 Byp N,,Venice,FL,34285,Booked,2024-10-20,2024-11-19,3.00
+629,YJUXNNPZ8R,2024-10-03 19:39:48.239152+00:00,Holiday Inn Express Hotel & Suites Port Richey,10619 Us Highway 19,,Port Richey,FL,34668,Applicant Accepted,2024-10-25,2024-11-24,3.00
+631,HBZRH2EPD8,2024-10-03 20:02:51.208833+00:00,SpringHill Suites by Marriott Tampa Suncoast Parkway,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Pending Booking,,,3.00
+633,LXDAMZKJ4L,2024-10-03 20:11:34.274853+00:00,Microtel Inn & Suites,4881 Commercial Way,,Spring Hill,FL,34606,Booked,2024-10-16,2024-11-15,2.00
+646,3EFP45935Z,2024-10-03 21:28:29.931153+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,Saint Petersburg,FL,33714,Booked,2024-10-19,,5.00
+647,E8N9G6GRX4,2024-10-03 21:35:10.728711+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-25,2024-11-24,2.00
+648,DAQ8CYPFE9,2024-10-03 21:40:50.900868+00:00,Quality Inn Saint Petersburg North-Tampa Bay,"2595 54th Ave N, Saint Petersburg, FL 33714",,St. Petersburg,FL,33714,Booked,2024-10-27,2024-11-26,2.00
+651,P35NJQWAGP,2024-10-03 22:09:11.567978+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,1.00
+653,WJFMRRTBKZ,2024-10-03 22:15:28.134014+00:00,Quality Inn Saint Petersburg North Tampa Bay,2595 54th North,,St. Petersburg,FL,33714,Booked,2024-10-19,,4.00
+668,CM6NYRNKT9,2024-10-04 20:34:08.302206+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-17,2024-11-16,1.00
+669,LTJPSVPWDB,2024-10-04 20:44:43.915703+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-21,,2.00
+672,722ZSZLQ3S,2024-10-04 21:04:23.309180+00:00,SpringHill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,2.00
+683,HXW4MSSMT8,2024-10-04 22:34:00.549123+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-21,2024-11-20,2.00
+684,NAD3BFE5GA,2024-10-04 22:56:11.799972+00:00,SpringHill Suites by Marriott Tampa Suncoast Parkway,16615 Crosspointe Run,,Land O'Lakes,FL,34638,Booked,2024-10-27,2024-11-26,3.00
+689,Z2ETX3XJVA,2024-10-05 11:55:13.971083+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+692,Z97UMG69QS,2024-10-05 12:23:15.562456+00:00,Springhill Suites,"16615 Crosspointe Run, Land O' Lakes",,Land o lakes,FL,34638,Booked,2024-11-01,,5.00
+696,88QSN9ZPSL,2024-10-05 12:47:06.052803+00:00,Days Inn by Wyndham Lake City I-75,3144 West US Highway 90,,Lake City,FL,32055,Booked,2024-10-16,2024-11-15,4.00
+697,QQHE326WCT,2024-10-05 12:53:34.684691+00:00,Residence Inn Suncoast,2101 Northpointe Pkwy,,Lutz,FL,33558,Booked,2024-11-01,2024-12-01,2.00
+704,RJJ7CGXKDA,2024-10-05 13:29:12.528926+00:00,Home2 Suites by Hilton Largo,10145 Ulmerton Road,,Largo,FL,33771,Booked,2024-10-24,2024-11-23,4.00
+708,UEEAUTN89Y,2024-10-05 13:40:07.726484+00:00,Springhill Suites,16615 Crosspointe Run,,Land o lakes,FL,34638,Booked,2024-11-01,,4.00
+712,DSV72RKL2R,2024-10-05 13:48:22.197377+00:00,Residence Inn Suncoast Parkway at Northpointe Villag,2101 Northpointe Parkway,,Lutz,FL,33558,Booked,2024-11-01,,3.00
+715,F6C45QCMC5,2024-10-05 13:55:20.269300+00:00,Quality Inn St Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,1.00
+718,3GEAFV63ZV,2024-10-05 14:00:08.401700+00:00,SpringHill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,3.00
+720,XJBLPBKK4Q,2024-10-05 14:03:16.127028+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,2024-10-26,2.00
+732,B5GZJYJL2S,2024-10-05 14:34:00.144987+00:00,Residence Inn Suncoast,2101 Northpointe Pkwy,,Lutz,FL,33558,Booked,2024-11-01,2024-11-30,2.00
+734,KUP9PS52U2,2024-10-05 14:42:00.175337+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,"2101 Northpointe Pkwy, Lutz, FL 33558",,Lutz,FL,33558,Booked,2024-11-01,2024-11-30,2.00
+740,V4S2JRWXK4,2024-10-05 14:57:59.125106+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+749,WUDV5WB9Q4,2024-10-05 15:25:57.807088+00:00,Springhill Suites,16615 Crosspointe Run,,Land O Lakes,FL,34638,Booked,2024-11-01,,1.00
+753,E357PDTGMU,2024-10-05 15:49:18.523358+00:00,Woodspring Suites,123 South Seminole Avenue,,Inverness,FL,34452,Booked,2024-10-14,,2.00
+764,6J5G28SQP5,2024-10-05 17:11:54.730893+00:00,Hampton Inn & Suites Tarpon Springs,39284 US Highway 19 N,,Tarpon springs,FL,34689,Booked,2024-10-20,2024-11-19,2.00
+777,QV8LR4JPFP,2024-10-05 17:55:59.209087+00:00,Days Inn by Wyndham St. Petersburg / Tampa Bay Area,5005 34th Street,,North St. Petersburg,FL,33714,Rejected,,,4.00
+784,PVUKX6WLAH,2024-10-05 19:38:39.362918+00:00,Residence Inn North Suncoast,"2101 Northpointe Pkwy, Lutz, FL 33558",,Lutz,FL,33558,Booked,2024-11-01,,2.00
+785,A5EG4HE9R3,2024-10-05 19:39:13.656216+00:00,Clarion Inn & Suites Central Clearwater Beach,20967 Us Highway 19,,North Clearwater,FL,33765,Booked,2024-10-20,2024-11-19,2.00
+821,DKJCSR8DJY,2024-10-06 15:20:59.634615+00:00,La Quinta Inn by Wyndham Clearwater Central,21338 Us Highway 19 N,,Clearwater,FL,33765,Booked,2024-10-16,2024-11-16,2.00
+833,CYFS684WN6,2024-10-06 16:02:03.188302+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,5.00
+836,WDJRKYHW3V,2024-10-06 16:05:42.652444+00:00,The Hotel Zamora,3701 Gulf Blvd,,St Petersburg,FL,33706,Booked,2024-10-22,2024-11-21,1.00
+848,8RCD537WB9,2024-10-06 16:25:15.813756+00:00,Homewood Suites Tampa Airport,"5325 Avion Park Dr Tampa, FL, US, 33607",,Tampa,FL,33607,Booked,2024-10-23,2024-11-22,2.00
+853,B6ZD8RF55U,2024-10-06 16:32:15.587693+00:00,Residence Inn Suncoast Parkway Northpointe Village,2101 Northpointe Parkway,,Lutz,FL,33558,Rejected,2024-11-01,,4.00
+854,B6ZD8RF55U,2024-10-06 16:32:15.587693+00:00,Days Inn & Suites by Wyndham Tampa/Raymond James Stadium,5405 N Church Ave,,Tampa,FL,33614,Booked,2024-10-21,2024-11-20,4.00
+873,6ETHFMV9V7,2024-10-06 16:52:35.868839+00:00,Hampton Inn and Suites North Port,5664 Tuscola Blvd,,North Port,FL,34287,Booked,2024-11-19,2024-12-19,2.00
+874,HUU6GFCD3C,2024-10-06 16:54:57.456331+00:00,Days Inn & Suites by Wyndham Tampa/Raymond James Stadium,"5405 N Church Ave Tampa, FL, US, 33614",,Tampa,FL,33614,Booked,2024-10-27,,2.00
+878,M2AZARDJUE,2024-10-06 16:58:21.021488+00:00,Springhill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,2.00
+882,ZR2KN9LSXF,2024-10-06 17:01:49.879366+00:00,Towneplace Suites,21090 U.S. Highway 19 North,,Clearwater,FL,33765,Booked,2024-10-27,2024-11-26,1.00
+885,82Z798Y8VN,2024-10-06 17:05:41.658707+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-20,2024-11-19,2.00
+886,LPS3M6CZRA,2024-10-06 17:06:21.313503+00:00,SpringHill Suites by Marriott Tampa Suncoast Parkway,16615 Crosspointe Run,,Land O'Lakes,FL,34638,Booked,2024-10-27,2024-11-26,2.00
+888,V8ZDHRPD4H,2024-10-06 17:08:08.387022+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+904,82M86QQ3A9,2024-10-06 17:25:49.925467+00:00,Howard Johnson by Wyndham Clearwater / Dunedin,2798 US Highway 19 N,,Clearwater,FL,33761,Moved Out,2024-10-15,2024-10-16,1.00
+911,6NQWWVXLES,2024-10-06 17:30:02.914318+00:00,Legacy Vacation Resorts - Indian Shores,19607 Gulf Blvd,,Indian Shores,FL,33785,Applicant Accepted,2024-10-25,2024-11-24,2.00
+914,MUYERZVTM8,2024-10-06 17:30:44.723460+00:00,"Country Inn & Suites by Radisson, St. Petersburg",8050 US Hwy 19 N,,Pinellas Park,FL,33781,Booked,2024-10-19,2024-11-18,2.00
+916,88V5AGD96D,2024-10-06 17:33:15.009487+00:00,"Country Inn & Suites by Radisson, St. Petersburg",8050 US Hwy 19 N,,North Pinellas Park,FL,33781,Moved Out,2024-10-21,2024-11-20,2.00
+922,7NVCD5ULRT,2024-10-06 17:38:56.906169+00:00,Microtel Inn & Suites,4881 Commercial Way,,Spring Hill,FL,34606,Booked,2024-10-13,2024-11-13,4.00
+924,J58N7TGPEK,2024-10-06 17:40:34.142671+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center),,Lutz,FL,33558,Rejected,2024-11-01,,2.00
+929,DR3LJJWBTZ,2024-10-06 17:45:04.254457+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center),,Lutz,FL,33558,Booked,2024-11-01,,2.00
+933,4MQ7FZQVU3,2024-10-06 17:48:32.099518+00:00,Comfort Inn and Suites Siesta Key,5690 Honore Ave,,Sarasota,FL,34233,Booked,2024-10-27,2024-11-27,1.00
+935,QZW7XPNY5B,2024-10-06 17:50:42.032037+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+939,4FVYGLUH5C,2024-10-06 17:55:02.960066+00:00,Days Inn by Wyndham St. Petersburg / Tampa Bay Area,5005 34th Street,,North St. Petersburg,FL,33714,Booked,2024-10-20,2024-11-19,1.00
+942,MN33EEY9FB,2024-10-06 17:57:06.330705+00:00,Springhill Suites by Marriott Tampa Suncoast Parkway,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,,2.00
+953,CVD8HRPTZX,2024-10-06 18:05:05.663090+00:00,Days Inn & Suites by Wyndham Tampa/Raymond James Stadium,5405 N Church Ave,,Tampa,FL,33614,Booked,2024-10-17,2024-11-17,3.00
+977,VPYB3Z43J4,2024-10-06 18:22:42.126553+00:00,Comfort Inn & Suites,6206 US HWY 19,,New Port Richey,FL,34652,Booked,2024-10-20,2024-11-18,1.00
+982,DSELUTJ7DA,2024-10-06 18:25:15.987613+00:00,La Quinta Inn by Wyndham Tampa Bay Pinellas Park Clearwater,7500 Highway 19 N,,Pinellas,FL,33781,Booked,2024-10-20,2024-11-19,2.00
+988,SKXATNE55R,2024-10-06 18:28:07.886828+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+1009,JZSVK8JL25,2024-10-06 18:42:20.735136+00:00,Fairfield Inn & Suites Tampa,2215 North Lois Avenue,,Tampa,FL,33607,Booked,2024-10-22,2024-11-21,3.00
+1014,B2K4CMDA7Q,2024-10-06 18:45:10.326538+00:00,Residence Inn by Marriott Tampa Wesley Chapel,2867 LAJUANA BLVD,,"Wesley Chapel,",FL,33543,Booked,2024-10-23,2024-11-22,1.00
+1016,JSWGVY8G7V,2024-10-06 18:47:03.836847+00:00,Aloft Tampa Midtown,3650 Midtown Drive,,Tampa,FL,33607,Booked,2024-10-30,2024-11-15,4.00
+1019,UGBUKL6CJA,2024-10-06 18:49:06.438403+00:00,Legacy Vacation Resorts - Indian Shores,19607 Gulf Blvd Indian Shores,,Indian Shores,FL,33785,Booked,2024-10-25,2024-11-24,4.00
+1025,ZN2NGNBVAA,2024-10-06 18:52:12.300597+00:00,"Holiday Inn Express & Suites St. Petersburg - Madeira Beach, an IHG Hotel, part of Holiday Inn Express",4816 100th Way North,,Madeira Beach,FL,33708,Booked,2024-10-27,2024-11-26,2.00
+1046,XMA3XZQ38S,2024-10-06 19:07:06.914680+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+1049,G2AYJHPTJP,2024-10-06 19:09:15.280273+00:00,Comfort Inn & Suites Northeast - Gateway,875 94th Avenue North,,St. Petersburg,FL,33702,Booked,2024-10-20,2024-11-18,3.00
+1050,KPALEPAHFK,2024-10-06 19:09:44.522288+00:00,Microtel Inn & Suites,4881 Commercial Way,,Spring Hill,FL,34606,Booked,2024-10-14,2024-11-13,2.00
+1052,M6HWQU6BRL,2024-10-06 19:10:06.391869+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,1.00
+1058,F34EY2MDBM,2024-10-06 19:14:27.792510+00:00,La Quinta Inn & Suites by Wyndham St. Pete-Clearwater Airpt,3301 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-24,2024-11-23,3.00
+1064,2BKHCVPAMQ,2024-10-06 19:17:32.837881+00:00,Days Inn by Wyndham Lake City,3144 West US Highway 90,,Lake City,FL,32055,Booked,2024-10-29,,5.00
+1065,2BKHCVPAMQ,2024-10-06 19:17:32.837881+00:00,Days Inn by Wyndham Lake City,3144 West US Highway 90,,Lake City,FL,32055,Booked,2024-10-29,2024-11-28,5.00
+1067,NA9S6D3W2W,2024-10-06 19:18:17.056238+00:00,Home2 Suites by Hilton Largo,"10145 Ulmerton Road  ,",,"Largo,",FL,33771,Booked,2024-11-26,2024-11-25,2.00
+1068,NA9S6D3W2W,2024-10-06 19:18:17.056238+00:00,Comfort Inn & Suites Northeast - Gateway,875 94th Avenue North,,Saint Petersburg,FL,33702,Moved Out,2024-10-26,2024-11-25,2.00
+1070,95L29X9SC6,2024-10-06 19:19:08.868335+00:00,Springhill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,5.00
+1071,95L29X9SC6,2024-10-06 19:19:08.868335+00:00,Springhill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,5.00
+1084,YDRJZCR3A3,2024-10-06 19:30:16.845071+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,1.00
+1092,2E8RJV8935,2024-10-06 19:38:09.076029+00:00,Residence Inn Suncoast Parkway at Northpoint,2101 Northpointe Parkway,,Lutz,FL,33558,Booked,2024-11-01,,2.00
+1097,JB9EHYD93N,2024-10-06 19:43:19.131338+00:00,Microtel Inn & Suites,4881 Commercial Way,,Spring Hill,FL,34606,Booked,2024-10-18,2024-11-16,3.00
+1098,5XEKEHVC8H,2024-10-06 19:44:31.910865+00:00,The Beachcomber,6200 Gulf Blvd,,St. Petersburg,FL,33706,Booked,2025-01-15,2025-02-14,3.00
+1110,J6SSBFRUXU,2024-10-06 19:50:39.152297+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,1.00
+1116,5VLBZJYYVL,2024-10-06 19:53:57.397670+00:00,Holiday Inn Express Inverness,903 E Gulf To Lake Hwy,,Lecanto,FL,34461,Booked,2024-10-19,2024-11-18,2.00
+1120,B7DZUX5CE2,2024-10-06 19:59:27.012787+00:00,Holiday Inn Express Clearwater East,13625 Icot Blvd,,Clearwater,FL,33760,Booked,2024-10-17,2024-11-16,3.00
+1129,QYKZLFTSLM,2024-10-06 20:04:26.919271+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd,,Clearwater,FL,33762,Moved Out,2024-10-16,2024-10-17,3.00
+1140,ZF3R8FZNF5,2024-10-06 20:15:32.048798+00:00,Clarion Inn & Suites Central Clearwater Beach,20967 Us Highway 19 N,,Clearwater,FL,33765,Moved Out,2024-10-21,2024-10-23,5.00
+1148,SAQYCE5FAK,2024-10-06 20:21:20.577088+00:00,Hampton Inn & Suites,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-16,2024-11-15,2.00
+1154,TXEW3JB555,2024-10-06 20:25:55.406449+00:00,La Quinta Inn by Wyndham Tampa Bay Pinellas Park Clearwater,7500 Highway 19 N,,Pinellas Park,FL,33781,Booked,2024-10-18,2024-11-18,1.00
+1155,EXUT498PGP,2024-10-06 20:26:53.073134+00:00,Sleep Inn & Suites Tampa South,6231 S Dale Mabry Highway,,Tampa,FL,33611,Booked,2024-10-16,2024-11-15,2.00
+1158,HSCLKG8SKB,2024-10-06 20:30:20.362191+00:00,Holiday Inn Express & Suites,10619 Us Highway 19,,New Port Richey,FL,34668,Booked,2024-10-22,2024-11-21,2.00
+1164,F8MAWUC4A3,2024-10-06 20:37:36.354325+00:00,Clarion Inn & Suites Central Clearwater Beach,20967 Us Highway 19 N,,Clearwater,FL,33765,Booked,2024-10-18,2024-11-18,2.00
+1165,F8MAWUC4A3,2024-10-06 20:37:36.354325+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd,,Clearwater,FL,33762,Moved Out,2024-10-16,2024-10-16,2.00
+1167,DTT8REJL6Y,2024-10-06 20:38:47.529769+00:00,Microtel Inn & Suites by Wyndham Spring Hill,4881 Commercial Way,,Spring Hill,FL,34606,Applicant Accepted,2024-10-25,,4.00
+1168,DK2ZQ5GLA3,2024-10-06 20:41:08.499085+00:00,Days Inn & Suites,5405 N Church Ave,,Tampa,FL,33614,Moved Out,2024-10-16,2024-10-23,3.00
+1172,7ALJDQF7K2,2024-10-06 20:47:29.305707+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-23,2024-11-22,1.00
+1176,RFLQB6PR4Y,2024-10-06 20:51:02.176864+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+1177,Q52MDPK32L,2024-10-06 20:52:19.116107+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,Saint Petersburg,FL,33714,Booked,2024-10-18,,1.00
+1178,Q52MDPK32L,2024-10-06 20:52:19.116107+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,1.00
+1179,Q6M8RABUJL,2024-10-06 20:54:19.332224+00:00,Hotel Zamora,3701 Gulf Blvd,,Saint Petersburg Florida,FL,33706,Booked,2024-10-22,2024-11-21,3.00
+1190,2YFR53FH4A,2024-10-06 21:26:00.252672+00:00,Hampton Inn & Suites,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-22,2024-11-21,5.00
+1191,2YFR53FH4A,2024-10-06 21:26:00.252672+00:00,Hampton Inn & Suites,11050 Us Highway 19,,Port Richey,FL,34668,Moved Out,2024-10-22,2024-11-21,5.00
+1221,HCR2ACQ3ET,2024-10-06 22:17:39.844869+00:00,WoodSpring Suites Hudson Port Richey,12407 US Highway 19 North,,Hudson,FL,34667,Booked,2024-10-25,,2.00
+1222,Y6XZSJKQZ2,2024-10-06 22:19:08.683261+00:00,Hampton Inn & Suites Tarpon Springs,"39284 Us Highway 19 N, Tarpon Springs, FL, 34689",,Tarpon Springs,FL,34689,Booked,2024-10-20,2024-11-19,2.00
+1223,Y6XZSJKQZ2,2024-10-06 22:19:08.683261+00:00,Rodeway Inn,6826 Us Highway 19,,New Port Richey,FL,34652,Moved Out,2024-10-18,2024-11-17,2.00
+1229,KYJ7KFPE63,2024-10-06 22:24:51.319762+00:00,La Quinta Inn by Wyndham,7500 Highway 19 N,,Pinellas Park,FL,33781,Booked,2024-10-20,2024-11-21,1.00
+1232,8HUC4GQJZP,2024-10-06 22:27:35.612814+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center),,Lutz,FL,33558,Booked,,,4.00
+1235,PLEF4D7CVV,2024-10-06 22:31:31.673488+00:00,"Country Inn & Suites by Radisson, St. Petersburg - Clearwater, FL",8050 US Hwy 19 N,,Pinellas Park,FL,33781,Applicant Accepted,2024-10-25,,1.00
+1236,C4L5P2LWAX,2024-10-06 22:33:30.458449+00:00,Crystal Palms Beach Resort,11605 Gulf Blvd,,Treasure Island,FL,33706,Booked,2024-10-22,2024-11-19,4.00
+1241,V6MZ7WBZP6,2024-10-06 22:39:59.136176+00:00,Rodeway Inn,11810 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-15,2024-11-14,1.00
+1264,NGBXYG3HGB,2024-10-06 23:10:28.532780+00:00,Clarion Inn & Suites Central Clearwater Beach,20967 Us Highway 19 N,,Clearwater,FL,33765,Booked,2024-10-21,2024-11-20,2.00
+1269,XYZ9AUN8WH,2024-10-06 23:18:03.637613+00:00,Econo Lodge Crystal River,2575 Suncoast Blvd Us 19,,Crystal River,FL,34428,Booked,2024-10-20,2024-11-19,2.00
+1284,DUW9VP8VTN,2024-10-06 23:38:53.910332+00:00,La Quinta Inn by Wyndham Tampa Bay Pinellas Park Clearwater,7500 Highway 19 N,,Pinellas Park,FL,33781,Booked,2024-10-25,2024-11-24,1.00
+1297,63YWMDA9KY,2024-10-06 23:58:59.320195+00:00,Homewood Suites Tampa Airport,5325 Avion Park Dr,,Tampa,FL,33607,Booked,2024-11-05,2024-12-05,2.00
+1324,LJ49SMEVAL,2024-10-07 00:45:42.047159+00:00,"Country Inn & Suites by Radisson, Tampa Airport East-RJ Stadium",4750 N Dale Mabry Hwy,,Tampa,FL,33614,Booked,2024-10-18,2024-11-17,2.00
+1329,P59UHDYP8R,2024-10-07 00:51:18.083501+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-21,2024-11-20,2.00
+1341,Q7H9XGT8NL,2024-10-07 01:05:45.252163+00:00,LaQuinta Inn & Suites by Wyndham Clearwater,5000 Lake Blvd,,Pinellas Park,FL,33760,Booked,2024-10-26,2024-11-25,1.00
+1345,8BMWN7HBW4,2024-10-07 01:09:24.079152+00:00,Holiday Inn Express & Suites Ruskin,226 Teco Rd,,Ruskin,FL,33570,Booked,2024-10-29,2024-11-28,4.00
+1347,5XWLN7X4DC,2024-10-07 01:12:29.300168+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-19,2024-11-18,4.00
+1350,DJ45MNZ9PW,2024-10-07 01:15:34.917512+00:00,Sleep Inn & Suites Port Charlotte,806 Kings Hwy,,Port Charlotte,FL,33980,Booked,2024-10-25,2024-11-24,1.00
+1351,DJ45MNZ9PW,2024-10-07 01:15:34.917512+00:00,Extended Stay America Premier Suites Port Charlotte I75,24100 BEATRIX BLVD,,Port Charlotte,FL,33954,Moved Out,2024-10-25,2024-11-24,1.00
+1365,G7FLUM7QNP,2024-10-07 01:31:12.070629+00:00,"Days Inn by Wyndham Madison, FL",6160 S State Road 53,,Madison,FL,32340,Booked,2024-10-12,2024-11-12,1.00
+1382,4RHN4CJUC3,2024-10-07 01:49:38.954021+00:00,Quality Inn & Suites Conference Center,5316 US Highway 19,,New Port Richey,FL,34652,Booked,2024-10-25,2024-11-24,2.00
+1394,XAVZM7F3ES,2024-10-07 02:06:03.364328+00:00,Sleep Inn & Suites Tampa South,6231 S Dale Mabry Highway,,Tampa,FL,33611,Booked,2024-10-27,2024-11-26,2.00
+1399,XDSZRPH84B,2024-10-07 02:16:08.693201+00:00,Quality Inn St Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,4.00
+1405,Q5HJ3UXQAP,2024-10-07 02:25:54.340765+00:00,Microtel Inn and Suites by Wyndham Port Charlotte,"4056 Tamiami Trl Port Charlotte, FL, US, 33952",,Port Charlotte,FL,33948,Booked,2024-10-24,2024-11-24,2.00
+1407,WUPU92EMB8,2024-10-07 02:30:28.157531+00:00,Comfort Inn & Suites New Port Richey Downtown District,6206 US HWY 19,,New Port Richey,FL,34652,Moved Out,2024-10-22,2024-11-21,1.00
+1408,WUPU92EMB8,2024-10-07 02:30:28.157531+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-26,2024-11-25,1.00
+1411,SH6PR7TTF2,2024-10-07 02:36:31.882386+00:00,Sleep Inn & Suites Tampa South,6231 S Dale Mabry Highway,,Tampa,FL,33611,Booked,2024-11-02,2024-12-02,4.00
+1412,AKJX42VEWR,2024-10-07 02:38:51.830901+00:00,Days Inn & Suites,10826 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-16,2024-11-15,3.00
+1417,MQFC6EM4XY,2024-10-07 02:46:43.423608+00:00,Microtel Inn & Suites,4881 Commercial Way,,Spring Hll,FL,34606,Booked,2024-10-17,2024-11-16,3.00
+1424,TA79CQ9WUG,2024-10-07 02:57:21.061016+00:00,SpringHill Suites by Marriott Tampa Suncoast Parkway,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,,2.00
+1426,7C7G482GDW,2024-10-07 03:03:21.600343+00:00,"Country Inn & Suites by Radisson, Tampa Airport East-RJ Stadium",4750 N Dale Mabry Hwy,,Tampa,FL,33614,Booked,2024-10-18,2024-11-17,1.00
+1441,J44RX4HZJJ,2024-10-07 04:24:54.218102+00:00,Microtel Inn & Suites,4881 Commercial Way,,Spring Hill,FL,34606,Booked,2024-10-21,2024-11-20,2.00
+1443,SF9BYFFUF8,2024-10-07 04:31:41.929673+00:00,Holiday Inn Express St. Petersburg North (I-275),2171 54th Ave N,,St. Petersburg,FL,33714,Booked,2024-12-01,2024-12-31,2.00
+1453,G6YTKZ5DP2,2024-10-07 08:51:25.812974+00:00,"Quality Inn & Suites at Tropicana Field, part of Quality hotels",1400 34th St N,,St Petersburg,FL,33713,Booked,2024-10-21,2024-11-22,4.00
+1457,VNTJVHQ26A,2024-10-07 09:14:10.209738+00:00,Clarion Inn & Suites Central Clearwater Beach,20967 Us Highway 19 N,,Clearwater,FL,33765,Moved Out,2024-10-13,2024-10-15,2.00
+1461,8GQLE4LRN3,2024-10-07 09:35:04.123491+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd,,Clearwater,FL,33762,Moved Out,2024-10-19,2024-10-20,3.00
+1462,8GQLE4LRN3,2024-10-07 09:35:04.123491+00:00,"Candlewood Suites Safety Harbor - Clearwater NE, an IHG Hotel",2471 Mcmullen Booth Road,,Safety Harbour,FL,33759,Booked,2024-10-26,2024-11-25,3.00
+1463,Z9WJVJNBG4,2024-10-07 10:34:07.692511+00:00,Comfort Inn & Suites,6206 US HWY 19,,Pinellas Park,FL,33781,Booked,2024-10-22,2024-11-20,1.00
+1468,8KGZ9JW6QA,2024-10-07 10:52:15.562832+00:00,Country inn and suites,8050 US Hwy 19N,,Pinellas Park,FL,33781,Booked,2024-10-28,2024-11-27,1.00
+1469,G6FZ9UMXRH,2024-10-07 10:55:19.696274+00:00,Comfort Inn & Suites New Port Richey Downtown District,6206 US HWY 19,,New Port Richey,FL,34652,Booked,2024-10-25,2024-11-24,2.00
+1470,HPPC8MLXJF,2024-10-07 10:58:34.823656+00:00,"Holiday Inn St Petersburg N - Clearwater, an IHG Hotel, part of Holiday Inn",3535 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-23,2024-11-22,3.00
+1471,DVLWDDP3YZ,2024-10-07 12:01:11.365604+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,"Port Richey, FL,",FL,34668,Booked,,,3.00
+1476,E3CR92HFMY,2024-10-07 12:15:31.643927+00:00,Residence Inn by Marriott St. Petersburg Tierra Verde,214 Madonna Blvd,,Tierra Verde,FL,33715,Booked,2024-10-31,2024-11-30,1.00
+1482,9K5HUADBA4,2024-10-07 12:22:27.548694+00:00,"Country Inn & Suites by Radisson, St. Petersburg",8050 US Hwy 19N,,Pinnellas Park,FL,33781,Booked,2024-10-20,2024-11-19,3.00
+1484,GXW7X7U822,2024-10-07 12:25:15.413261+00:00,Extended Stay America Premier Suites Tampa Gibsonton,10623 East Bay Road,,Gibsonton,FL,33534,Booked,2024-10-26,2024-11-25,1.00
+1487,LYVZ79RYJZ,2024-10-07 12:29:34.608607+00:00,"Residence Inn St Petersburg Treasure Island, part of Residence Inn by Marriott","11908 Gulf Blvd, Treasure Island, FL 33706",,Saint Petersburg,FL,33706,Booked,2024-10-23,2024-11-22,2.00
+1517,EH8GGNQU6A,2024-10-07 13:12:17.098932+00:00,"Country Inn & Suites by Radisson, St. Petersburg - Clearwater, FL",8050 US Hwy 19 N,,Pinellas Park,FL,33781,Booked,2024-11-01,2024-12-01,1.00
+1540,S8L3PPQZLM,2024-10-07 13:35:21.852085+00:00,TownePlace Suites Tampa Clearwater,21090 U.S. Highway 19 North,,Clearwater,FL,33765,Rejected,,,5.00
+1541,PBLVZVRYUS,2024-10-07 13:35:52.131144+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+1543,N4JUD5DAQ3,2024-10-07 13:39:15.319755+00:00,Comfort Suites Tampa-Brandon,9932 Adamo Dr,,Tampa,FL,33619,Booked,2024-10-16,2024-11-15,5.00
+1544,CAJ58A8QUV,2024-10-07 13:39:59.764258+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center),,Lutz,FL,33558,Booked,2024-11-01,,2.00
+1546,Y45N9RFHST,2024-10-07 13:42:45.278000+00:00,"Hampton Inn Tampa-Veterans Expwy (Airport North), part of Hampton by Hilton",5628 W Waters Ave,,Tampa,FL,33634,Booked,2024-10-25,2024-11-24,4.00
+1558,8DSZ5S9TE3,2024-10-07 13:58:07.112636+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,St Petersburg,FL,33714,Booked,2024-10-27,2024-11-26,3.00
+1559,RFYD4WBG3F,2024-10-07 14:00:16.444459+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+1562,A2V69Q2ZZ7,2024-10-07 14:08:30.978258+00:00,Holiday Inn Express & Suites St. Petersburg - Madeira Beach,4816 100th Way North,,Madeira Beach,FL,33708,Booked,2024-10-28,2024-11-27,2.00
+1587,ZNPA352KCS,2024-10-07 14:34:54.202832+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-15,2024-11-16,2.00
+1593,R87HG2BCZD,2024-10-07 14:39:43.182498+00:00,Hyatt Place Tampa Airport/Westshore,4811 W Main St,,Tampa,FL,33607,Booked,2024-10-26,2024-11-03,2.00
+1597,L54AH5VZ4K,2024-10-07 14:43:02.125317+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,3.00
+1604,25WECJJZC2,2024-10-07 14:49:46.863639+00:00,Harbourside Marker 33,"2nd St 399, 4413",,Indian Rocks Beach,FL,33785,Booked,2024-10-26,2024-11-25,4.00
+1626,ZGFLQNF8E6,2024-10-07 15:15:58.340964+00:00,"Comfort Inn & Suites Northeast - Gateway, part of Comfort Inn & Suites",875 94th Avenue North,,St Petersburg,FL,33702,Booked,2024-10-28,2024-10-27,8.00
+1627,ZGFLQNF8E6,2024-10-07 15:15:58.340964+00:00,"Comfort Inn & Suites Northeast - Gateway, part of Comfort Inn & Suites",875 94th Avenue North,,St. Petersburg,FL,33702,Booked,2024-10-28,2024-11-27,8.00
+1630,JB7RF7SMQN,2024-10-07 15:18:35.103632+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+1645,V97CKXXDGC,2024-10-07 15:45:00.677944+00:00,"Country Inn & Suites by Radisson, St. Petersburg - Clearwater, FL","8050 US Hwy 19N,",,Pinellas Park,FL,33781,Booked,2024-10-27,2024-11-26,1.00
+1650,VAAWWPV5TW,2024-10-07 15:51:09.472331+00:00,La Quinta Inn & Suites by Wyndham St. Pete-Clearwater Airpt,3301 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-27,2024-11-26,1.00
+1651,GDTZ3LLFXN,2024-10-07 15:52:30.060761+00:00,"Econo Lodge Perry, part of Econo Lodge",2220 S Us 19,,Perry,FL,32348,Booked,2024-10-25,2024-11-24,4.00
+1657,VAQF4LDGP9,2024-10-07 16:00:34.659346+00:00,Comfort Inn & Suites,6206 US HWY 19,,New Port Richey,FL,36452,Booked,2024-10-21,2024-11-20,1.00
+1676,VWMVNR4JPZ,2024-10-07 16:21:30.708261+00:00,Extended Stay America Premier Suites Tampa Gibsonton Rivervi,10623 East Bay Road,,Gibsonton,FL,33534,Booked,2024-10-26,2024-11-26,1.00
+1709,79755GDN6A,2024-10-07 17:00:32.977698+00:00,SpringHill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,10.00
+1713,BTWHWA8M77,2024-10-07 17:05:27.275164+00:00,"Days Inn by Wyndham Madison, FL",6160 S State Road 53,,Madison,FL,32340,Booked,2024-10-12,2024-11-12,6.00
+1714,BTWHWA8M77,2024-10-07 17:05:27.275164+00:00,"Days Inn by Wyndham Madison, FL",6160 S State Road 53,,Madison,FL,32340,Booked,2024-10-12,2024-11-12,6.00
+1736,L2BSA49F72,2024-10-07 17:27:40.735831+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-29,2024-11-28,4.00
+1752,WFUKKTVEDG,2024-10-07 17:59:43.526221+00:00,Days Inn by Wyndham St. Petersburg / Tampa Bay Area,5005 34th Street North,,St Petersburg,FL,33714,Booked,2024-10-25,2024-11-24,2.00
+1757,PEC7KR5VS6,2024-10-07 18:04:46.286995+00:00,"Holiday Inn Express & Suites Ruskin, an IHG Hotel, part of Holiday Inn Express",226 Teco Road,,Ruskin,FL,33570,Booked,2024-10-28,2024-11-27,3.00
+1759,PV7YX27FPH,2024-10-07 18:06:59.782710+00:00,Sleep Inn & Suites Tampa South,6231 S Dale Mabry Highway,,Tampa,FL,`33611,Booked,2024-10-30,2024-11-29,1.00
+1768,9M96BE5D6B,2024-10-07 18:17:52.848750+00:00,Hotel Alba,5303 W Kennedy Blvd,,Tampa,FL,33609,Booked,2024-10-27,2024-11-26,4.00
+1796,EC2N3VFSX9,2024-10-07 19:11:04.613972+00:00,"Holiday Inn Express & Suites Ruskin, an IHG Hotel",226 Teco Road,,Ruskin,FL,33570,Booked,2024-10-27,2024-11-26,2.00
+1799,4TRRW8H3DZ,2024-10-07 19:17:00.874474+00:00,Days Inn & Suites,10826 Us Highway 19,,"Port Richey,",FL,34668,Booked,2024-10-17,2024-11-01,3.00
+1800,4TRRW8H3DZ,2024-10-07 19:17:00.874474+00:00,Hampton Inn & Suites,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-16,2024-11-15,3.00
+1812,YT38VNHA2M,2024-10-07 19:36:20.950600+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,3.00
+1857,85QNTWFNZX,2024-10-07 21:06:24.959861+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,Saint Petersburg,FL,33714,Booked,2024-10-19,,3.00
+1860,4Y58VCUJAV,2024-10-07 21:12:48.943073+00:00,"Holiday Inn Express & Suites St. Petersburg - Madeira Beach, an IHG Hotel, part of Holiday Inn Express","4816 100th Way North, Madeira Beach, FL 33708",,Madeira Beach,FL,33708,Booked,2024-11-03,2024-12-02,2.00
+1912,3XF52B87M3,2024-10-07 22:20:17.759471+00:00,La Quinta Inn,7500 Highway 19 N,,Pinellas,FL,33781,Booked,2024-10-22,2024-11-21,2.00
+1916,B4PQ76PBXD,2024-10-07 22:27:15.204046+00:00,Residence Inn Tampa Suncoast Parkway at NorthPointe Village,2101 Northpointe Pkwy (Northpointe Village Shopping Center),,Lutz,FL,33558,Booked,,,2.00
+1926,P4ZMTDXGCH,2024-10-07 22:36:51.730216+00:00,Holiday Inn Express & Suites,10619 US 19,,Port Richey,FL,34668,Booked,2024-10-19,2024-11-18,2.00
+1929,64ZJ4U8UPW,2024-10-07 22:37:18.895461+00:00,Hyatt Place Tampa Airport/Westshore,4811 W Main St,,Tampa,FL,33607,Booked,2024-10-23,2024-11-22,2.00
+1933,QLAX7KCTKT,2024-10-07 22:41:34.128531+00:00,Home 2 Suites by Hilton,10145 Ulmerton Road,,largo,FL,33771,Booked,2024-10-24,2024-11-23,3.00
+1936,DQA4G5BUHV,2024-10-07 22:42:41.986640+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-23,2024-11-22,5.00
+1953,LHVBGQT33P,2024-10-07 22:53:30.223597+00:00,SpringHill Suites By Marriott Tampa Suncoast Parkway,16615 Crosspointe Run,,Land O' Lake,FL,34638,Booked,2024-10-27,2024-11-26,2.00
+1968,5B55VMREMD,2024-10-07 23:04:47.529213+00:00,Quality Inn,4800 N Tamiami Trl,,Sarasota,FL,34234,Moved Out,2024-10-19,2024-11-18,2.00
+1974,PNH2NAJMEG,2024-10-07 23:10:24.602432+00:00,"Comfort Inn & Suites New Port Richey Downtown District, part of Comfort Inn & Suites",6206 US HWY 19,,New Port Richey,FL,34652,Booked,2024-10-28,2024-11-27,2.00
+1975,2T2CJP9FDG,2024-10-07 23:12:52.126194+00:00,courtyard,3131 Executive Dr2,,Clearwater,FL,33762,Booked,2024-10-30,2024-11-29,1.00
+1998,MF3N7KZXWV,2024-10-07 23:47:17.800943+00:00,Days Inn & Suites by Wyndham Tampa/Raymond James Stadium,5405 N Church Ave,,Tampa,FL,33614,Booked,2024-10-18,2024-11-17,2.00
+2008,4U52RTL378,2024-10-08 00:09:04.988391+00:00,Crystal Palms Beach Resort,11605 Gulf Blvd,,Treasure Island,FL,33706,Booked,2024-10-28,2024-11-27,2.00
+2009,4U52RTL378,2024-10-08 00:09:04.988391+00:00,Country Inn & Suites by Radisson,8050 US Hwy 19N,,St. Petersburg,FL,33781,Moved Out,2024-10-24,2024-10-24,2.00
+2013,P7P6FQSF7W,2024-10-08 00:16:00.259792+00:00,Springhill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,3.00
+2014,3W8J2P8LZV,2024-10-08 00:19:02.237078+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,Saint Petersburg,FL,33714,Booked,2024-10-19,,2.00
+2060,7GM8EHNVCJ,2024-10-08 12:38:51.869213+00:00,Home2 Suites by Hilton Largo,10145 Ulmerton Road,,Largo,FL,33771,Booked,2024-11-19,2024-12-18,2.00
+2066,GETH6RQ3VL,2024-10-08 12:52:31.295187+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-10-19,,2.00
+2075,DDLF2P8DTA,2024-10-08 13:14:59.295058+00:00,SpringHill Suites by Marriott Punta Gorda Harborside,101 Harborside Ave,,Punta Gorda,FL,33950,Booked,2024-10-26,2024-11-25,1.00
+2087,J2Y2W8MMA3,2024-10-08 13:30:17.605168+00:00,Days Inn by Wyndham Clearwater/Gulf to Bay,2940 Gulf to Bay Blvd,,Clearwater,FL,33781,Booked,2024-10-22,2024-11-21,1.00
+2106,HWN6JRCTG3,2024-10-08 14:23:11.063900+00:00,Springhill Suites,16615 Crosspointe Run,,Land O' Lakes,FL,34638,Booked,2024-10-27,2024-11-26,3.00
+2111,CJP6NVU9Y7,2024-10-08 14:47:33.168601+00:00,Comfort Suites Sarasota - Siesta Key,5690 Honore Ave,,Sarasota,FL,34233,Booked,2024-10-24,2024-11-23,1.00
+2130,DG8X2Q9BDS,2024-10-08 16:08:10.586597+00:00,Best Western Plus Madison,167 SE Bandit Street,,madison,FL,32340,Booked,2024-10-20,2024-11-19,1.00
+2131,5XE72NSAEX,2024-10-08 16:08:57.528015+00:00,Hampton Inn Springhill,1344 Commercial Way,,Spring Hill,FL,34606,Applicant Accepted,2024-10-30,2024-11-29,7.00
+2132,5XE72NSAEX,2024-10-08 16:08:57.528015+00:00,Hampton Inn Springhill,1344 Commercial Way,,Springhill,FL,34606,Applicant Accepted,2024-10-30,2024-11-29,7.00
+2148,9TPR6UE2D7,2024-10-08 16:57:08.607726+00:00,Johns Pass Hotel,2854 Johns Wy,,St Pete Beach,FL,33708,Booked,2024-10-25,2024-11-21,1.00
+2165,47U83HZVLJ,2024-10-08 17:28:26.071638+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,St Petersburg,FL,33714,Booked,2024-10-21,2024-11-20,1.00
+2177,R4JNQE86TA,2024-10-08 18:13:25.461161+00:00,Legacy Vacation Resorts - Indian Shores,"19607 Gulf Blvd, Indian Shores, FL 33785",,Gulf Shores,FL,33785,Booked,2024-10-24,2024-11-23,1.00
+2188,Q9FKV3EA4J,2024-10-08 18:30:18.598075+00:00,Residence Inn St. Petersburg Treasure Island,11908 Gulf Blvd,,Treasure Island,FL,33706,Booked,2024-10-21,2024-11-19,4.00
+2189,QDYPGYJHL9,2024-10-08 18:33:04.461921+00:00,Days Inn & Suites,10826 US Highway 19,,Port Richey,FL,34668,Booked,2024-10-20,2024-11-19,2.00
+2190,NRC5UZBAUW,2024-10-08 18:33:27.841200+00:00,Comfort Inn & Suites New Port Richey Downtown District,6206 US HWY 19,,NEW PORT RICHEY,FL,34652,Booked,2024-10-22,2024-11-21,2.00
+2194,8K7FXNZMKP,2024-10-08 18:38:31.736262+00:00,Hampton Inn & Suites,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-19,2024-11-18,4.00
+2212,6BTC7PXA8D,2024-10-08 19:22:59.103712+00:00,Sure Stay Hotel By Best Western,3655 Hospitality Lane,,Clearwater,FL,33762,Booked,2024-10-25,2024-11-22,2.00
+2224,S4UV3ZQHE2,2024-10-08 20:01:46.143871+00:00,LaQuinta Inn by Wyndham Tampa Bay Pinellas Park Clearwater,7500 Highway 19 N,,Pinellas Park,FL,33781,Booked,2024-10-30,2024-11-29,2.00
+2229,48XX25C2WL,2024-10-08 20:14:32.869018+00:00,Hampton Inn Odessa Trinity,11780 SR 54,,Trinity,FL,33556,Booked,2024-10-21,2024-11-20,1.00
+2237,AYH8Y8S9NY,2024-10-08 20:34:57.989629+00:00,Harbourside Marker 33,"2nd St 399, 4413",,Indian Rocks Beach,FL,33785,Booked,2024-10-26,2024-11-25,3.00
+2240,7FTVVN7UZG,2024-10-08 20:44:26.360871+00:00,Holiday Inn,3535 Ulmerton Rd.,,Clearwater,FL,33762,Rejected,,,2.00
+2261,GHVAUTZ72F,2024-10-08 21:16:26.515487+00:00,"Holiday Inn Express & Suites St. Petersburg - Madeira Beach, an IHG Hotel","4816 100th Way North Madeira Beach, FL, US, 33708",,Madeira Beach,FL,33708,Booked,2024-11-04,2024-12-03,1.00
+2280,G5PMQ63DG7,2024-10-08 21:39:19.716243+00:00,Holiday Inn Express Clearwater East - Icot Center,13625 Icot Blvd,,Clearwater,FL,33760,Booked,2024-10-26,2024-11-25,3.00
+2288,QYSWDJ4H3U,2024-10-08 21:49:26.129859+00:00,Hampton Inn and Suites,"11780 SR 54 Trinity, FL, US, 33556",,Trinity,FL,33556,Booked,2024-10-24,2024-11-24,1.00
+2293,6HKN2H3WWH,2024-10-08 21:55:06.596802+00:00,Quality Inn and Suites,Quality Inn & Suites Tarpon Springs South,,"38724 US Highway 19 North Palm Harbor, FL, US, 34689",FL,38724,Booked,2024-10-24,2024-11-23,3.00
+2299,KPQVHBUMHN,2024-10-08 22:01:46.050635+00:00,Holiday Inn Express,226 Teco Road,,Ruskin,FL,33570,Booked,2024-11-01,2024-10-30,7.00
+2320,NSVCH4AUQB,2024-10-08 22:23:04.992272+00:00,Hampton Inn & Suites Ruskin I-75,711 33rd Street Southeast,,Ruskin,FL,33570,Booked,2024-11-10,2024-12-10,2.00
+2322,YES7R2XUDE,2024-10-08 22:23:53.584129+00:00,Homewood Suites Hotels Port Richey,11115 US Highway 19,,Port Richey,FL,34668,Booked,2024-10-22,2024-11-21,1.00
+2323,YES7R2XUDE,2024-10-08 22:23:53.584129+00:00,Clarion Inn & Suites Central Clearwater Beach,20967 Us Highway 19 N,,Clearwater,FL,33765,Moved Out,2024-10-18,2024-10-20,1.00
+2339,Z3H2G7KGRL,2024-10-08 22:42:35.937890+00:00,"Holiday Inn Express Crystal River, an IHG Hotel",1203 Ne 5th St,,Crystal River,FL,34429,Booked,2024-10-25,2024-11-24,3.00
+2351,5NGCPPJX77,2024-10-08 22:59:13.317706+00:00,Quality Inn & Suites at Tropicana Field,1400 34th St N,,St. Petersburg,FL,33713,Booked,2024-10-22,2024-11-21,4.00
+2394,5XGRRB5N7P,2024-10-09 00:25:56.014255+00:00,Hampton inn & suites,975 University Pkwy,,Sarasota,FL,34243,Booked,2024-11-04,2024-12-03,1.00
+2410,5EPA3GRGQG,2024-10-09 01:29:20.892470+00:00,Days Inn by Wyndham St. Petersburg / Tampa Bay Area,5005 34th Street,,North St Petersburg,FL,33714,Booked,2024-10-19,2024-11-18,2.00
+2431,BT9BSAZAZU,2024-10-09 12:50:11.082391+00:00,TownePoint Suites by Marriott Tampa Clearwater,21090 US Highway 19,,North Clearwater,FL,33765,Rejected,2024-11-01,2024-12-01,2.00
+2449,Y8MVLUZC47,2024-10-09 13:31:12.858644+00:00,Comfort Inn & Suites,6206 US HWY 19,,New Port Richey,FL,34652,Booked,2024-10-21,2024-11-11,1.00
+2468,MSYJWRBMJ4,2024-10-09 13:47:33.107772+00:00,Residence Inn Suncoast Parkway at Northpointe,2101 Northpointe Parkway,,Lutz,FL,33558,Booked,2024-11-01,,4.00
+2476,5R994RLLX5,2024-10-09 14:01:10.564649+00:00,Hyatt Place Tampa Airport/Westshore,"4811 W Main St Tampa, FL, US, 33607",,"Tampa, FL, US, 33607",FL,33608,Booked,2024-10-22,2024-11-21,2.00
+2484,JBMRS7PA3J,2024-10-09 14:18:10.022023+00:00,Hampton Inn and Suites Port Richey,"11050 Us Highway 19 Port Richey, FL, US, 34668",,Port Richey,FL,34668,Booked,2024-10-22,2024-11-21,2.00
+2518,RZZXLB6Q85,2024-10-09 15:15:31.845172+00:00,"Holiday Inn Express & Suites St. Petersburg - Madeira Beach, an IHG Hotel",4816 100th Way,,North Madeira Beach,FL,33708,Booked,2024-10-27,2024-11-26,2.00
+2521,34WU8PLM2K,2024-10-09 15:20:17.839750+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,St Petersburg,FL,33714,Booked,2024-10-21,2024-11-21,2.00
+2531,2CWQMFF7XM,2024-10-09 15:48:38.976234+00:00,Holiday Inn Express Venice,380 Commercial St,,Venice,FL,34292,Booked,2024-10-26,2024-11-25,2.00
+2535,GFW86S4GMJ,2024-10-09 15:55:16.925945+00:00,"Sleep Inn & Suites Tampa South, part of Sleep Inn",6231 S Dale Mabry Highway,,Tampa,FL,33611,Booked,2024-10-22,2024-11-21,1.00
+2557,PRL94W5YBP,2024-10-09 16:27:37.368384+00:00,Residence Inn by Marriott,4012 Tampa rd,,Oldsmar,FL,34677,Booked,2024-10-28,2024-11-27,4.00
+2572,VW55RCLFGP,2024-10-09 17:03:06.124767+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Applicant Accepted,2024-10-26,,2.00
+2579,46EQN9R27T,2024-10-09 17:20:06.739369+00:00,Quality Inn & Suites Live Oak,6819 Us Highway 129,,Live Oak,FL,32060,Booked,2024-10-17,2024-11-15,5.00
+2595,PA4JN4LMWA,2024-10-09 17:53:11.481013+00:00,La Quinta Inn by Wyndham Tampa Near Busch Gardens,9202 N 30th St Tampa,,Tampa,FL,33612,Booked,2024-10-27,2024-11-26,5.00
+2596,PA4JN4LMWA,2024-10-09 17:53:11.481013+00:00,La Quinta Inn by Wyndham Tampa Near Busch Gardens,9202 N 30th St,,Tampa,FL,33612,Booked,2024-10-27,2024-11-26,5.00
+2600,952ZYALMBE,2024-10-09 18:05:48.414542+00:00,Aloft Tampa midtown,3650 Midtown Drive,,Tampa,FL,33607,Booked,2024-10-30,2024-11-29,1.00
+2615,Q8ZU7CQN63,2024-10-09 19:13:09.565792+00:00,Home2 Suites by Hilton Largo,10145 Ulmerton Road,,Largo,FL,33771,Applicant Accepted,2024-11-01,,3.00
+2630,DE485N9MJB,2024-10-09 20:00:52.062085+00:00,Towneplace Suites Tampa Clearwater,21090 US Highway 19,,North Clearwater,FL,33765,Rejected,2024-11-01,,5.00
+2675,B8XFPYC97T,2024-10-09 20:49:34.902574+00:00,Quality Inn,"1125 North Young Boulevard Chiefland, FL, US, 32626",,Cheifland,FL,32626,Booked,2024-11-19,2024-12-19,2.00
+2689,NR7AWCT69C,2024-10-09 21:20:15.507845+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-19,2024-11-18,2.00
+2691,R3B5R5XVUM,2024-10-09 21:25:24.648889+00:00,Extended Stay America Suites St Petersburg Clearwater ExecDr,3089 Executive Dr,,Clearwater,FL,33762,Booked,2024-10-24,2024-11-23,2.00
+2711,LFEN4YQRQK,2024-10-09 21:58:47.163947+00:00,Hampton Inn and Suites,"4050 Ulmerton Rd, Clearwater, FL 33762",,Clearwater,FL,33762,Booked,2024-10-25,2024-11-24,2.00
+2722,YSP8E3ESSQ,2024-10-09 22:11:47.561548+00:00,Holiday Inn St. Petersburg,1200 34th Street North,,St. Petersburg,FL,33713,Booked,2024-10-20,2024-11-19,2.00
+2727,SELJ6HTD7L,2024-10-09 22:24:59.161354+00:00,Extended Stay America Suites Clearwater Carillon Park,2311 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-11-02,2024-12-02,2.00
+2825,R8L4WWU6CE,2024-10-10 13:41:09.800164+00:00,"Days Inn by Wyndham Madison, part of Days Inn by Wyndham",6160 South State Road 53,,Madison,FL,32340,Booked,2024-10-22,2024-11-21,2.00
+2847,HSTE7AXGCR,2024-10-10 14:31:24.592266+00:00,La Quinta Inn & Suites by Wyndham USF (Near Bush Gardens),3701 E Fowler Ave,,Tampa,FL,33612,Booked,2024-10-15,2024-11-14,4.00
+2862,QD9YUR5BFF,2024-10-10 14:55:45.855252+00:00,Baymont by Wyndham Sarasota,1425 S Tamiami Trl,,Sarasota,FL,34239,Booked,2024-10-19,2024-11-18,4.00
+2863,QD9YUR5BFF,2024-10-10 14:55:45.855252+00:00,Baymont by Wyndham Sarasota,1425 S Tamiami Trl,,Sarasota,FL,34239,Booked,2024-10-19,2024-11-18,4.00
+2865,J3KBJLUPQU,2024-10-10 15:09:32.834150+00:00,La Quinta Inn by Wyndham Tampa Near Busch Gardens,"9202 N 30th St, Tampa, FL, 33612",,Tampa,FL,33612,Booked,2024-10-22,2024-11-20,5.00
+2885,X2FCC9MFB5,2024-10-10 15:31:59.852071+00:00,Rodeway Inn,11810 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-15,2024-11-14,4.00
+2908,FQSFUT54MP,2024-10-10 16:17:25.763271+00:00,Hampton Inn & Suites Tarpon Springs,39284 Us Highway 19,,North Tarpon Springs,FL,34689,Booked,2024-10-27,2024-11-26,5.00
+2909,FQSFUT54MP,2024-10-10 16:17:25.763271+00:00,Hampton Inn & Suites Tarpon Springs,39284 Us Highway 19,,North Tarpon Springs,FL,34689,Booked,2024-10-27,2024-11-26,5.00
+2910,S2VC2AQ6TC,2024-10-10 16:17:31.208074+00:00,Quality Inn Saint Petersburg North-Tampa Bay,2595 54th Ave N,,St. Petersburg,FL,33714,Booked,2024-10-21,2024-11-20,1.00
+2911,6FXN6EEULJ,2024-10-10 16:17:50.857972+00:00,Quality Inn St. Petersburg North Tampa Bay,2595 54th Ave North,,St Petersburg,FL,33714,Booked,2024-10-19,,2.00
+2929,BLMMGE5337,2024-10-10 16:43:42.614768+00:00,Days Inn & Suites,10826 US Highway 19,,Port Richey,FL,34668,Booked,2024-10-20,2024-11-19,2.00
+2935,ZXQ85BY2AU,2024-10-10 16:48:58.705375+00:00,Hampton Inn Spring Hill,1344 Commercial Way,,Spring Hill,FL,34606,Applicant Accepted,2024-10-31,2024-11-30,7.00
+2936,ZXQ85BY2AU,2024-10-10 16:48:58.705375+00:00,Hampton Inn Spring Hill,1344 Commercial Way,,Spring Hill,FL,34606,Applicant Accepted,2024-10-31,2024-11-30,7.00
+2946,M8EBBXXEME,2024-10-10 16:59:11.449425+00:00,Super 8 by Wyndham,5005A 34th St N,,St. Petersburg,FL,33714,Booked,2024-10-25,2024-11-22,3.00
+2954,Y5PWKY96JK,2024-10-10 17:10:31.360339+00:00,"Country Inn & Suites by Radisson, St. Petersburg",8050 US Hwy 19 N,,St. Petersburg,FL,33781,Moved Out,2024-10-18,2024-10-20,5.00
+2955,Y5PWKY96JK,2024-10-10 17:10:31.360339+00:00,Residence Inn by Marriott Tampa at USF/ Medical Center,13420 N Telecom Pkwy,,Tampa,FL,33637,Moved Out,2024-10-15,2024-10-18,5.00
+2956,Y5PWKY96JK,2024-10-10 17:10:31.360339+00:00,SureStay Hotel by Best Western ST. Pete Clearwater Airport,3655 Hospitality Lane,,Clearwater,FL,33762,Rejected,2024-10-23,2024-11-20,5.00
+2961,MPSVCMPCKH,2024-10-10 17:19:25.031471+00:00,Quality Inn & Suites Conference Center,5316 Us Highway 19,,New Port Richey,FL,34652,Booked,2024-10-28,2024-11-27,1.00
+2962,SZD5FMLQNT,2024-10-10 17:24:52.443359+00:00,Residence Inn by Marriott Tampa Wesley Chapel,2867 LAJUANA BLVD,,Wesley Chapel,FL,33543,Booked,2024-10-25,2024-11-24,2.00
+2969,G8YEKPEDFU,2024-10-10 17:58:52.848005+00:00,Home 2 Suites by Hilton Largo,10145 Ulmerton Road,,Largo,FL,33771,Booked,2024-11-02,2024-12-02,3.00
+2975,7JP78HQMZT,2024-10-10 18:12:52.895245+00:00,Rodeway Inn,"4076 S Suncoast Blvd, Homosassa, FL 34446",,Homossasa,FL,34446,Booked,2024-10-19,2024-11-18,4.00
+3011,JY4LB4PKUV,2024-10-10 19:00:30.785341+00:00,Home2 Suites by Hilton Largo,10145 Ulmerton Road,,Largo,FL,33771,Booked,2024-10-28,2024-11-27,3.00
+3021,ARSHYLM4X2,2024-10-10 19:20:29.790912+00:00,"Microtel Inn & Suites by Wyndham Spring Hill/Weeki Wachee, part of Microtel by Wyndham",4881 Commercial Way,,Spring Hill,FL,34606,Booked,2024-10-22,2024-11-24,1.00
+3038,NC25B5TN5J,2024-10-10 19:51:02.839317+00:00,"Candlewood Suites Safety Harbor - Clearwater NE, an IHG Hotel",2471 Mcmullen Booth Road,,Safety Harbour,FL,33759,Booked,2024-11-16,2024-12-16,2.00
+3053,ZA9QNYC4FV,2024-10-10 20:38:15.181539+00:00,"Holiday Inn Express & Suites St. Petersburg - Madeira Beach, an IHG Hotel",4816 100th Way,,North Madeira Beach,FL,33708,Booked,2024-10-27,2024-11-26,3.00
+3059,8SGXRWK4SU,2024-10-10 21:09:50.835699+00:00,Homewood Suites by Hilton Tampa-Port Richey,11115 Us Highway 19,,"Port Richey,",FL,34668,Booked,2024-10-26,2024-11-25,2.00
+3061,NLV3GJYRAW,2024-10-10 21:12:15.550216+00:00,"CandleWood Suites Safety Harbor, Clearwater NE, an IHG Hotel",2471 Mcmullen Booth Road,,Safety Harbour,FL,33759,Booked,2024-12-04,2025-01-03,5.00
+3062,NLV3GJYRAW,2024-10-10 21:12:15.550216+00:00,"CandleWood Suites Safety Harbor, Clearwater NE, an IHG Hotel",2471 Mcmullen Booth Road,,Safety Harbour,FL,33759,Booked,2024-12-04,2025-01-03,5.00
+3131,NMJRLTUCK5,2024-10-11 12:55:34.126671+00:00,Holiday Inn St Petersburg,1200 34th Street,,St. Petersburg,FL,33713,Booked,2024-10-24,2024-11-23,2.00
+3149,U4KM6HAAQM,2024-10-11 13:54:29.138928+00:00,"WoodSpring Suites Hudson Port Richey, part of WoodSpring Suites",12407 US Highway 19 North,,Hudson,FL,34667,Moved Out,2024-10-24,2024-10-31,4.00
+3150,U4KM6HAAQM,2024-10-11 13:54:29.138928+00:00,Homewood Suites by Hilton Tampa - Port Richey,11115 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-31,2024-11-29,4.00
+3177,HUTPAVBLCN,2024-10-11 14:42:28.837690+00:00,Holiday INN Express Hotel and Suites Port Richey an IHG Hotel,10619 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-25,2024-11-24,2.00
+3218,SGCYW25BTB,2024-10-11 15:55:18.068544+00:00,WoodSpring Suites Hudson Port Richey,12407 US Highway 19,,North Hudson,FL,34667,Booked,2024-10-30,2024-11-29,3.00
+3241,Q7S7MNEMY6,2024-10-11 16:32:47.394680+00:00,Clarion Inn & Suites Central Clearwater Beach,20967 US Highway 19 N,,Clearwater,FL,33765,Booked,2024-10-19,2024-11-18,2.00
+3246,KVWJWSFNWX,2024-10-11 16:39:05.499111+00:00,Extended Stay America Select Suites Tampa Brandon East,2450 S Falkenburg Rd,,Tampa,FL,33619,Booked,2024-10-27,2024-11-26,7.00
+3284,9FQA4PYFU8,2024-10-11 17:25:45.551991+00:00,Home 2 Suites by Hilton Largo,10145 Ulterman Rd,,Largo,FL,33771,Booked,2024-11-01,2024-12-01,2.00
+3287,RAKQBCU8JD,2024-10-11 17:29:39.064161+00:00,Holiday Inn St Petersburg N - Clearwater,131 148th Avenue FL,,Madeira Beach,FL,33708,Booked,2024-10-26,2024-11-24,1.00
+3288,U43EJS2VX5,2024-10-11 17:31:57.575903+00:00,"Holiday Inn Express & Suites St. Petersburg - Madeira Beach, an IHG Hotel",4816 100th Way,,North Madeira Beach,FL,33708,Booked,2024-10-27,2024-11-26,2.00
+3294,YGUCHM4SGB,2024-10-11 17:40:11.344170+00:00,Quality Inn St Petersburg North-Tampa Bay,2595 54th Ave North,,St. Petersburg,FL,33714,Booked,2024-11-02,2024-12-02,2.00
+3303,HVQAXK85JB,2024-10-11 17:48:51.862940+00:00,Hampton Inn & Suites Tampa Northwest/Oldsmar,"4017 Tampa Road Oldsmar, FL, US, 34677",,Oldsmar,FL,34677,Booked,2024-11-04,2024-12-04,3.00
+3346,QKX5P2HQM5,2024-10-11 18:45:41.302243+00:00,Days Inn by Wyndham Crystal River,2380 NW Hwy 19,,Crystal River,FL,34428,Booked,2024-10-18,2024-11-19,2.00
+3350,PLXBG696RT,2024-10-11 18:51:02.998088+00:00,La Quinta Inn by Wyndham,7500 Highway 19 N,,Pinellas Park,FL,33781,Booked,2024-10-19,2024-11-18,1.00
+3438,SQ52JDJKJ7,2024-10-11 20:19:28.695387+00:00,"LaQuinta Inn & Suites by Wyndham, St Pete-Clearwater Airport",3301 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-21,2024-11-19,1.00
+3467,CL88UGNW9X,2024-10-11 20:45:11.883913+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-11-15,2024-12-15,2.00
+3474,CSF7FLFDNV,2024-10-11 20:52:02.415569+00:00,"LaQuinta Inn & Suites by Wyndham, St Pete-Clearwater Airport",3301 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-21,2024-11-20,1.00
+3523,MWYACFMCLQ,2024-10-11 21:42:03.847917+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Applicant Accepted,2024-10-27,2024-11-26,5.00
+3524,MWYACFMCLQ,2024-10-11 21:42:03.847917+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Applicant Accepted,2024-10-27,2024-11-26,5.00
+3566,6HZJULUY3Q,2024-10-11 22:17:34.032584+00:00,HomeTowne Studios by Red Roof Tampa,6121 West Sitka Street,,Tampa,FL,33634,Applicant Accepted,2024-10-25,2024-11-24,1.00
+3589,AAZFS6ZJGN,2024-10-11 22:43:55.205167+00:00,"Holiday Inn & Suites Clearwater Beach S-Harbourside, an IHG Hotel",401 2nd St,,Indian Rocks,FL,33785,Moved Out,2024-10-27,2024-11-26,1.00
+3590,AAZFS6ZJGN,2024-10-11 22:43:55.205167+00:00,Legacy Vacation Resorts - Indian Shores,19607 Gulf Blvd,,Indian Shores,FL,33785,Booked,2024-10-27,2024-11-26,1.00
+3595,4JHGPLEFLT,2024-10-11 22:49:41.975662+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Applicant Accepted,2024-10-26,2024-11-25,4.00
+3659,4LH73UU87B,2024-10-11 23:54:05.942614+00:00,Holiday Inn Express & Suites,206 Albee Rd,,Nokomis,FL,34275,Booked,2024-10-23,2024-11-22,1.00
+3684,5X4P7J2H52,2024-10-12 00:26:56.618605+00:00,Comfort Inn & Suites,6206 US HWY 19,,New Port Richey,FL,34652,Booked,2024-10-25,2024-11-24,4.00
+3732,MUKMMEMAHH,2024-10-12 13:02:09.140321+00:00,Hampton Inn Spring Hill,1344 Commercial Way,,Spring Hill,FL,34606,Booked,2024-11-11,2024-12-11,2.00
+3736,CBCUTGR5KW,2024-10-12 13:33:56.612510+00:00,Hampton Inn & Suites,1050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-24,2024-11-23,1.00
+3744,ZCM5BZZYG8,2024-10-12 14:02:54.976807+00:00,Quality Inn & Suites,5316 Us Highway 1952,,New Port Richey,FL,34652,Booked,2024-10-28,2024-10-27,2.00
+3782,M7GPFCD5JU,2024-10-12 16:03:13.251721+00:00,Sleep Inn & Suites Tampa South,6231 S Dale Mabry Highway,,"Tampa,",FL,33611,Booked,2024-10-26,2024-11-25,2.00
+3957,8QDAAQ4DBJ,2024-10-13 17:27:25.806566+00:00,"Holiday Inn St Petersburg N - Clearwater, an IHG Hotel",3535 Ulmerton Rd,,Clearwater,FL,33762,Booked,2024-10-24,2024-11-23,3.00
+3992,CCNE45MWWL,2024-10-13 22:03:24.938303+00:00,La Quinta Inn,9202 N 30th St,,Tampa,FL,33612,Booked,2024-10-27,2024-11-26,2.00
+4024,FY9BQYFP2A,2024-10-14 11:18:07.494223+00:00,Quality Inn & Suites at Tropicana Field,1400 34th St North,,St. Petersburg,FL,33713,Booked,2024-10-20,2024-11-19,4.00
+4026,PDC5WGXGFU,2024-10-14 12:02:22.742201+00:00,WoodSpring Suites,12407 US Highway 19 North,,hudson,FL,33466,Booked,2024-10-28,2024-11-27,1.00
+4037,TPA5FA5WAK,2024-10-14 12:35:37.910989+00:00,Comfort Inn & Suites New Port Richey Downtown District,6206 US HWY 19,,New Port Richey,FL,34652,Booked,2024-10-26,2024-11-25,2.00
+4040,4E46CR3EN8,2024-10-14 12:44:28.765034+00:00,Days Inn & Suites by Wyndham,5405 N Church Ave,,Tampa,FL,33614,Booked,2024-10-22,2024-11-21,4.00
+4053,T3XBRL7D73,2024-10-14 13:21:10.662183+00:00,WoodSpring Suites Hudson Port Richey,12407 US Highway 19 North,,Hudson,FL,34667,Booked,2024-10-22,2024-11-22,3.00
+4109,FE2BKPFX4T,2024-10-14 15:02:04.525541+00:00,"Holiday Inn Express Venice, an IHG Hotel",380 Commercial Ct,,Venice,FL,34292,Booked,2024-10-26,2024-11-25,4.00
+4177,GXEJ4AZJBQ,2024-10-14 17:05:27.392306+00:00,Hampton Inn & Suites Port Richey,"11050 Us Highway 19  FL, US,",,"Port Richey,",FL,34668,Booked,2024-10-26,2024-11-25,2.00
+4271,8S6GH2W5L3,2024-10-14 20:32:51.592711+00:00,The Hotel Zamora,3701 Gulf Blvd,,St Petersburg,FL,33706,Booked,2024-10-21,2024-11-20,3.00
+4329,KJSWN6HT99,2024-10-14 23:36:59.252061+00:00,Comfort Inn & Suites New Port Richey Downtown District,6206 US HWY 19,,New Port Richey,FL,34652,Booked,2024-10-26,2024-11-25,1.00
+4354,ZW54K5X7NE,2024-10-15 12:32:46.721429+00:00,Clarion Inn & Suites Central Clearwater Beach,20967 US Highway 19 N,,Clearwater,FL,33765,Booked,2024-10-26,2024-11-25,1.00
+4361,9KB3XQBWNV,2024-10-15 13:43:39.749537+00:00,Extended Stay America Premier Suites Tampa Gibsonton,10623 East Bay Road,,Gibsonton,FL,33534,Booked,2024-10-26,2024-11-25,3.00
+4362,DDPD22ZYZP,2024-10-15 14:04:32.344577+00:00,Hampton Inn & Suites Port Richey,11050 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-27,2024-11-26,2.00
+4489,8JSQGDGDLZ,2024-10-15 21:54:47.032374+00:00,La Quinta Inn & Suites by Wyndham Sarasota Downtown,"1803 N Tamiami Trail, Sarasota, FL, 34234",,Sarasota,FL,34234,Booked,2024-10-26,2024-11-25,1.00
+4671,JDPW7B7LED,2024-10-17 18:43:09.718054+00:00,Homewood Suites by Hilton Tampa - Port Richey,11115 Us Highway 19,,Port Richey,FL,34668,Booked,2024-10-28,2024-11-27,3.00
+4742,NA6276YR9X,2024-10-18 13:20:10.266929+00:00,Quality Inn & Suites at Tropicana Field,1400 34th St N,,St Petersburg,FL,33713,Rejected,2024-10-24,2024-11-23,3.00
+4743,NA6276YR9X,2024-10-18 13:20:10.266929+00:00,Comfort Inn & Suites Northeast - Gateway,875 94th Avenue North,,Saint Petersburg,FL,33702,Booked,2024-10-27,2024-11-26,3.00
+4953,4U6TUNQ8QL,2024-10-21 22:24:40.934500+00:00,Quality Inn Conference Center at Citrus Hills,350 E Norvell Bryant Hwy,,Hernando,FL,34442,Booked,2024-10-21,2024-11-20,1.00

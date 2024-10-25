@@ -4,7 +4,7 @@ from fuzzywuzzy import process
 
 
 
-def clean_empty_none(field, df):
+def clean_empty_none(field, df, removed):
     
     #Create Empty DataFrame
     cleaned_df = pd.DataFrame()
@@ -33,13 +33,13 @@ def clean_empty_none(field, df):
                 cleaned_df = pd.concat([cleaned_df, pd.DataFrame(row).T])
 
             elif add_check == False:
-                removed_df = pd.concat([removed_df, pd.DataFrame(row).T])
+                removed = pd.concat([removed, pd.DataFrame(row).T])
 
         except Exception as e:
             raise Exception(f'Error: Failed to Add Row to Cleaned DataFrame {e}')
 
-
-    return cleaned_df, removed_df
+        
+    return cleaned_df, removed
 
 
 

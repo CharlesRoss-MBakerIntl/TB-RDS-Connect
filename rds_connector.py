@@ -275,8 +275,7 @@ def build_clean_list(join_list):
                             #Add to Clean List
                             clean_list.append(entry)
 
-                            return clean_list
-                        
+                
                         #If Calc not in Dictionary
                         elif (clean_dict[calc] == None):
                             raise Exception(f'Error: {calc} did not match any function in the function dictionary.')
@@ -284,14 +283,11 @@ def build_clean_list(join_list):
                     except Exception as e:
                         raise Exception(f"Error: Could not add calc entry to clean list.  Traceback:{e}")  
                     
+             
 
 
-    #Return blank list if join_list empty
-    else:
-        return []
-
-
-
+    #Return Clean List
+    return clean_list      
 
 
 
@@ -396,10 +392,12 @@ class RDSTablePull:
         self.cursor = cursor
         self.source = source
         self.join_list = join_list
-        self.schema = build_schema(source, join_list, schema, exclude)
-        self.query = build_query(query, source, join_list)
-        self.clean_list = build_clean_list(join_list)
+        self.schema = build_schema(source = source, join_list = join_list, schema = schema, exclude = exclude)
+        self.query = build_query(query = query, source = source, join_list = join_list)
+        self.clean_list = build_clean_list(join_list = join_list)
         self.df = pd.DataFrame()
+        self.removed = pd.DataFrame()
+        self.cleaning_versions = []
         self.fields_missing = []
         
 
@@ -449,10 +447,47 @@ class RDSTablePull:
 
 
 
-    def clean_table(self):
-        pass
+    def clean_table(self, data):
+
+        #Reset Cleaning Versions 
+        if len(self.cleaning_versions) != 0:
+            self.cleaning_versions = []
+
+        #Reset Cleaning Versions
+        if self.removed.empty == False:
+            self.removed = pd.DataFrame()
+        
+        #Add Original Data to Clean Version List
+        self.cleaning_versions.append({"Step": 'Original DataFrame', "Field": None, "Result": data})
+
+        for step in self.clean_list:
+            
+            #Store Field
+            field = step['field']  # Adjust based on your actual structure
+            
+            #Store Function
+            clean_function = step['function']    # Assuming your steps include the type of calculation
+            
+            #Perform Cleaning
+            if clean_function:
+                
+                #Clean Emtpy Nones from Data, Save Removals
+                if clean_function == clean_empty_none:
+                    version = "Clean Nulls and Empty Fields"
+                    data, self.removed = clean_function(field, data, self.removed)
+
+                #CONTINUE ADDING FUNCTIONS
 
 
+                #Add Version and Step to Clean Version List    
+                self.cleaning_versions.append({"Step": version, "Field": field, "Result": data})
+            
+
+        #Add Final DataFrame
+        self.cleaning_versions.append({"Step": 'Final DataFrame', "Field": None, "Result": data})
+
+        #Return Cleaned Data
+        return data
     
 
 
@@ -506,7 +541,7 @@ class RDSTablePull:
 
                     #If Selected, Update Columns
                     if clean == True:
-                        self.clean_table()
+                        self.df = self.clean_table(data)
 
                     #Return DataFrame
                     return self.df
