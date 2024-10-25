@@ -2,6 +2,8 @@ import psycopg2
 import pandas as pd
 import codecs
 
+from data_cleaning_utils import clean_empty_none
+
 
 #----------------------------------------------------------------
 
@@ -242,9 +244,51 @@ def build_schema(source = None, join_list = None, schema = None, exclude = None)
 
 #----------------------------------------------------------------
 
-def build_clean_list(source = None, join_list = None, schema = None, exclude = None):
+def build_clean_list(join_list):
 
-    pass
+    #Create Clean Dictionary
+    clean_dict = {
+    'NULL' : clean_empty_none,
+    'DATE_CONVERT': '',
+    'INT_CONVERT': ''
+    }
+
+    #Create Clean List
+    clean_list = []
+
+    # Cycle Through Clean Lists
+    for item in join_list:
+        for field in item['clean']:
+            for name, calcs in field.items():
+                for calc in calcs:
+                    
+                    #Attempt to Pull the Function Step from the Dictionary
+                    try:
+
+                        #If Calc in Dictionary
+                        if (clean_dict[calc] != None):
+                            
+                            #Create Entry from Dictionary
+                            entry = {'field': name,
+                                     'function': clean_dict[calc]}
+
+                            #Add to Clean List
+                            clean_list.append(entry)
+
+                            return clean_list
+                        
+                        #If Calc not in Dictionary
+                        elif (clean_dict[calc] == None):
+                            raise Exception(f'Error: {calc} did not match any function in the function dictionary.')
+
+                    except Exception as e:
+                        raise Exception(f"Error: Could not add calc entry to clean list.  Traceback:{e}")  
+                    
+
+
+    #Return blank list if join_list empty
+    else:
+        return []
 
 
 
@@ -354,7 +398,7 @@ class RDSTablePull:
         self.join_list = join_list
         self.schema = build_schema(source, join_list, schema, exclude)
         self.query = build_query(query, source, join_list)
-        self.clean_list = build_clean_list()
+        self.clean_list = build_clean_list(join_list)
         self.df = pd.DataFrame()
         self.fields_missing = []
         
