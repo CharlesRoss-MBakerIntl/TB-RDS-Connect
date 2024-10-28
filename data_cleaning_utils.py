@@ -9,10 +9,7 @@ def clean_empty_none(field, df, removed):
     #Create Empty DataFrame
     cleaned_df = pd.DataFrame()
 
-    #Create Capture for Removed Rows
-    removed_df = pd.DataFrame()
-
-    
+    #Check if Field in Dataframe
     if field not in df.columns:
         raise Exception(f"Error: {field} Not In DataFrame")
 
@@ -44,20 +41,40 @@ def clean_empty_none(field, df, removed):
 
 
 
-def convert_dates(field, df):
-    
-    #Create Empty DataFrame
-    cleaned_df = pd.DataFrame()
+def convert_dates(field, df, output_format = None):
 
     #Check if Field in DataFrame
     if field not in df.columns:
         raise Exception(f"Error: {field} Not In DataFrame")
 
+    
+    try:
+        df[field] = pd.to_datetime(df[field])
+        
+        #Convert to String Format if output_format passed
+        if output_format != None:
+            df[field] = df[field].dt.strftime(output_format)
+            
+        return df
+    
+    except Exception as e:
+       raise Exception(f"Error: Could not convert {field} to datetime:  Traceback{e}")
+    
 
-    #Convert Field
 
 
-    return cleaned_df
+def convert_integer(field, df):
+
+    #Check if Field in DataFrame
+    if field not in df.columns:
+        raise Exception(f"Error: {field} Not In DataFrame")
+    
+    try:
+        df[field] = pd.to_numeric(df[field], errors='coerce')
+        return df
+    
+    except Exception as e:
+        raise Exception(f"Error: Could not convert {field} to integer:  Traceback{e}")
 
 
 

@@ -3,7 +3,8 @@ import pandas as pd
 import codecs
 
 from data_cleaning_utils import clean_empty_none
-
+from data_cleaning_utils import convert_dates
+from data_cleaning_utils import convert_integer
 
 #----------------------------------------------------------------
 
@@ -249,8 +250,8 @@ def build_clean_list(join_list):
     #Create Clean Dictionary
     clean_dict = {
     'NULL' : clean_empty_none,
-    'DATE_CONVERT': '',
-    'INT_CONVERT': ''
+    'DATE_CONVERT': convert_dates,
+    'INT_CONVERT': convert_integer
     }
 
     #Create Clean List
@@ -387,14 +388,27 @@ class RDSTablePull:
     """
 
 
-    def __init__(self, conn, cursor, query = None, source = None, join_list = None, schema = None, exclude = None):
+    def __init__(self, conn, cursor, query = None, query_package = None, schema = None, exclude = None):
+        
+        #Store Connector and Query Package 
         self.conn = conn
         self.cursor = cursor
-        self.source = source
-        self.join_list = join_list
-        self.schema = build_schema(source = source, join_list = join_list, schema = schema, exclude = exclude)
-        self.query = build_query(query = query, source = source, join_list = join_list)
-        self.clean_list = build_clean_list(join_list = join_list)
+        self.query_package = query_package
+
+        #Store Source and Join List Based on Query Package
+        if query_package == None:
+            self.source = None
+            self.join_list = None
+        else:
+            self.source = query_package["source"]
+            self.join_list = query_package["join_list"]
+
+        #Create Schema, Query, and Clean List
+        self.schema = build_schema(source = self.source, join_list = self.join_list, schema = schema, exclude = exclude)
+        self.query = build_query(query = query, source = self.source, join_list = self.join_list)
+        self.clean_list = build_clean_list(join_list = self.join_list)
+
+        #Store Empty Variables for Later Use
         self.df = pd.DataFrame()
         self.removed = pd.DataFrame()
         self.cleaning_versions = []
@@ -476,6 +490,16 @@ class RDSTablePull:
                     version = "Clean Nulls and Empty Fields"
                     data, self.removed = clean_function(field, data, self.removed)
 
+                #Clean Emtpy Nones from Data, Save Removals
+                elif clean_function == convert_dates:
+                    version = "Convert String Dates to DateTimes"
+                    data = clean_function(field, data)
+
+                #Clean Emtpy Nones from Data, Save Removals
+                elif clean_function == convert_integer:
+                    version = "Convert String Numbers to Integers"
+                    data = clean_function(field, data)
+
                 #CONTINUE ADDING FUNCTIONS
 
 
@@ -492,7 +516,7 @@ class RDSTablePull:
 
 
 
-    def query_to_df(self, clean = False):
+    def query_to_df(self, clean = True):
         
         """
         Execute the SQL query and update the dataframe with the results, optionally renaming columns.
