@@ -2,9 +2,9 @@ import psycopg2
 import pandas as pd
 import codecs
 
-from data_cleaning_utils import clean_empty_none
-from data_cleaning_utils import convert_dates
-from data_cleaning_utils import convert_integer
+
+
+################    RDS TABLE CONNECTION    ######################
 
 #----------------------------------------------------------------
 
@@ -56,301 +56,10 @@ def rds_connection(username, password, db, server):
 
 
 
-
-#----------------------------------------------------------------
-
-def list_tables(cursor):
-    
-    # Execute the query to get all table names
-    cursor.execute("""
-        SELECT table_name 
-        FROM information_schema.tables 
-        WHERE table_schema = 'public'
-    """)
-
-    # Fetch all table names
-    tables = cursor.fetchall()
-
-    # Create Empty List
-    table_lst = []
-
-    # Print the table names
-    for table in tables:
-        table_lst.append(table[0])
-
-    return table_lst
     
 
 
-
-
-
-#----------------------------------------------------------------
-
-def build_query(source = None, join_list = None, query = None):
-    
-    #If Source and Join List Passed, Query 
-    if (query == None) & (source != None) & (join_list != None):
-        
-        #Set Count for Join Sections
-        join_count = 1
-
-        #Initialize Query Select
-        query = "SELECT\n"
-
-        #Add Fields from Source
-        try:
-            for field in source['fields']:
-                for tn, jn in field.items():
-                    query += f"    {source['name']}.{tn} AS {jn},\n"
-
-        except Exception as e:
-            raise Exception(f"Error: Could not pull fields from Source, check Source data package.  Traceback: {e}")
-
-
-
-        # Add Fields from Joins
-        try:
-            for index, item in enumerate(join_list):
-                # Add Join Segments
-                for field in item['fields']:
-                    for tn, jn in field.items():
-                        if index == len(join_list) - 1 and field == item['fields'][-1]:
-                            query += f"    {item['name']}.{tn} AS {jn}\n"
-                        else:
-                            query += f"    {item['name']}.{tn} AS {jn},\n"
-
-        except Exception as e:
-            raise Exception(f"Error: Could not pull fields from Join List, check Join List data package.  Traceback: {e}")
-
-
-
-        #Add Source
-        try:
-            query += "\nFROM\n"
-            query += f"    {source['table']} {source['name']}\n"
-        
-        except Exception as e:
-            raise Exception(f"Error: Could not pull source table or name from Source data package.  Traceback: {e}")
-
-
-
-        #Add Joins
-        try:
-            for index, item in enumerate(join_list):
-                
-                if index == 0:
-                    data_conn = 'initial_join_answers'
-                else:
-                    data_conn = f'join_answers_{join_count}'
-                    join_count += 1
-
-                if item['question_source'] == "JOIN_SOURCE":
-                    question_source = source['name']
-
-                elif item['question_source'] == "DATA_SOURCE":
-                    question_source = 'initial_join_answers'
-                
-                query += f"\nLEFT JOIN application_data_answer {data_conn} ON {question_source}.{item['source_id']} = {data_conn}.{item['join_id']} AND {data_conn}.question_id = {item['question_id']}"
-                query += f"\nLEFT JOIN {item['data_source']} {item['name']} ON {data_conn}.id = {item['name']}.answer_ptr_id\n"
-
-        except Exception as e:
-            raise Exception(f"Error: Could not pull join information from join list, check join list data package.  Traceback: {e}")
-
-
-
-        #Filter Project
-        try:
-            query += "\n WHERE \n"
-            query += f"    {source['name']}.project_id = {source['project']}"
-
-        except:
-            raise Exception(f"Error: Could not apply project filter to query.  Traceback: {e}")
-
-
-
-        #Order Project
-        try:
-            query += "\n ORDER BY\n"
-            query += f"{source['name']}.{source['order']};"
-        
-        except:
-            raise Exception(f"Error: Could not apply order operations to query.  Traceback: {e}")
-        
-            
-        #Encode String
-        query = codecs.decode(query.encode(), 'unicode_escape')
-
-
-
-    # If Query Passed, Pass Back Query
-    elif (query != None) & (source == None) & (join_list == None):
-        query = query
-
-
-    #Return Query
-    return query
-
-
-
-
-
-    
-
-#----------------------------------------------------------------
-
-def build_schema(source = None, join_list = None, schema = None, exclude = None):
-
-    # Create Empty Schema List
-    schema_lst = []
-
-    #If Source and Join List Data Present
-    if (schema == None) & (source != None) & (join_list != None):
-        
-        try:
-            #Add Fields from Source
-            for field in source['fields']:
-                for tn, jn in field.items():
-                    schema_lst.append(jn)
-
-
-            # Add Fields from Joins
-            for item in join_list:
-                for field in item['fields']:
-                    for tn, jn in field.items():
-                            schema_lst.append(jn)
-    
-        except Exception as e:
-            raise Exception(f"Error: Could not build schema from source or join list, check data packages.  Traceback: {e}")
-
-
-    #If Source Manually Passed Into Function
-    elif (schema != None) & (source == None) & (join_list == None):
-        schema_lst = schema
-
-    #Filter Schema List
-    if exclude != None:
-        schema_lst = [field for field in schema_lst if field not in exclude]
-
-    #Return Schema List
-    return schema_lst
-
-
-
-
-
-
-
-
-
-#----------------------------------------------------------------
-
-def build_clean_list(join_list):
-
-    #Create Clean Dictionary
-    clean_dict = {
-    'NULL' : clean_empty_none,
-    'DATE_CONVERT': convert_dates,
-    'INT_CONVERT': convert_integer
-    }
-
-    #Create Clean List
-    clean_list = []
-
-    # Cycle Through Clean Lists
-    for item in join_list:
-        for field in item['clean']:
-            for name, calcs in field.items():
-                for calc in calcs:
-                    
-                    #Attempt to Pull the Function Step from the Dictionary
-                    try:
-
-                        #If Calc in Dictionary
-                        if (clean_dict[calc] != None):
-                            
-                            #Create Entry from Dictionary
-                            entry = {'field': name,
-                                     'function': clean_dict[calc]}
-
-                            #Add to Clean List
-                            clean_list.append(entry)
-
-                
-                        #If Calc not in Dictionary
-                        elif (clean_dict[calc] == None):
-                            raise Exception(f'Error: {calc} did not match any function in the function dictionary.')
-
-                    except Exception as e:
-                        raise Exception(f"Error: Could not add calc entry to clean list.  Traceback:{e}")  
-                    
-             
-
-
-    #Return Clean List
-    return clean_list      
-
-
-
-
-
-
-#----------------------------------------------------------------
-
-def rds_sql_pull(cursor, query):
-
-    """
-    Executes a SQL query using the provided cursor, fetches rows, and converts them to a Pandas DataFrame.
-
-    Parameters:
-    - cursor: Cursor object for database connection.
-    - query: SQL query string to be executed.
-
-    Explanation:
-    This function attempts to execute a SQL query using the given cursor. It fetches all rows from the query result 
-    and then converts these rows into a Pandas DataFrame. If the conversion to a DataFrame fails, an exception is raised, 
-    and the process is stopped to indicate the failure. The function ensures that the SQL query is executed 
-    and its results are correctly transformed into a DataFrame format for further data manipulation or analysis.
-
-    Return:
-    The DataFrame containing the query results if successful.
-
-    Note:
-    Any failure in executing the query or converting the result to a DataFrame triggers an exception, 
-    alerting the user to address the issue promptly.
-    """
-
-    try:
-
-        # Execute Query
-        cursor.execute(query)
-        # Fetch Columns
-        columns = [col[0] for col in cursor.description]
-        # Fetch Rows
-        rows = cursor.fetchall()
-
-
-        try:
-        
-            #Convert to Dataframe
-            df = pd.DataFrame(rows, columns=columns)
-            return df
-
-
-        except Exception as e:
-            
-            # Raise Exception to Stop Process if Failure
-            raise Exception(f"Rows Pulled from Cursor, Failed to Convert to Pandas Dataframe: {e}")
-
-
-    except Exception as e:
-
-        # Raise Exception to Stop Process if Failure
-        raise Exception(f"Failed to Pull Rows from Cursor Query Execute: {e}")
-
-
-
-
+################    RDA TABLE PULL CLASS    ######################
 
 #----------------------------------------------------------------
 
@@ -582,4 +291,389 @@ class RDSTablePull:
 
         
 
+
+
+
+
+
+################    RDS PROCESSING FUNCTIONS    ######################
+
+#----------------------------------------------------------------
+
+def rds_sql_pull(cursor, query):
+
+    """
+    Executes a SQL query using the provided cursor, fetches rows, and converts them to a Pandas DataFrame.
+
+    Parameters:
+    - cursor: Cursor object for database connection.
+    - query: SQL query string to be executed.
+
+    Explanation:
+    This function attempts to execute a SQL query using the given cursor. It fetches all rows from the query result 
+    and then converts these rows into a Pandas DataFrame. If the conversion to a DataFrame fails, an exception is raised, 
+    and the process is stopped to indicate the failure. The function ensures that the SQL query is executed 
+    and its results are correctly transformed into a DataFrame format for further data manipulation or analysis.
+
+    Return:
+    The DataFrame containing the query results if successful.
+
+    Note:
+    Any failure in executing the query or converting the result to a DataFrame triggers an exception, 
+    alerting the user to address the issue promptly.
+    """
+
+    try:
+
+        # Execute Query
+        cursor.execute(query)
+        # Fetch Columns
+        columns = [col[0] for col in cursor.description]
+        # Fetch Rows
+        rows = cursor.fetchall()
+
+
+        try:
+        
+            #Convert to Dataframe
+            df = pd.DataFrame(rows, columns=columns)
+            return df
+
+
+        except Exception as e:
+            
+            # Raise Exception to Stop Process if Failure
+            raise Exception(f"Rows Pulled from Cursor, Failed to Convert to Pandas Dataframe: {e}")
+
+
+    except Exception as e:
+
+        # Raise Exception to Stop Process if Failure
+        raise Exception(f"Failed to Pull Rows from Cursor Query Execute: {e}")
+
+
+
+#----------------------------------------------------------------
+
+def build_clean_list(join_list):
+
+    #Create Clean Dictionary
+    clean_dict = {
+    'NULL' : clean_empty_none,
+    'DATE_CONVERT': convert_dates,
+    'INT_CONVERT': convert_integer
+    }
+
+    #Create Clean List
+    clean_list = []
+
+    # Cycle Through Clean Lists
+    for item in join_list:
+        for field in item['clean']:
+            for name, calcs in field.items():
+                for calc in calcs:
+                    
+                    #Attempt to Pull the Function Step from the Dictionary
+                    try:
+
+                        #If Calc in Dictionary
+                        if (clean_dict[calc] != None):
+                            
+                            #Create Entry from Dictionary
+                            entry = {'field': name,
+                                     'function': clean_dict[calc]}
+
+                            #Add to Clean List
+                            clean_list.append(entry)
+
+                
+                        #If Calc not in Dictionary
+                        elif (clean_dict[calc] == None):
+                            raise Exception(f'Error: {calc} did not match any function in the function dictionary.')
+
+                    except Exception as e:
+                        raise Exception(f"Error: Could not add calc entry to clean list.  Traceback:{e}")  
+                    
+             
+
+
+    #Return Clean List
+    return clean_list
+
+
+
+#----------------------------------------------------------------
+
+def build_schema(source = None, join_list = None, schema = None, exclude = None):
+
+    # Create Empty Schema List
+    schema_lst = []
+
+    #If Source and Join List Data Present
+    if (schema == None) & (source != None) & (join_list != None):
+        
+        try:
+            #Add Fields from Source
+            for field in source['fields']:
+                for tn, jn in field.items():
+                    schema_lst.append(jn)
+
+
+            # Add Fields from Joins
+            for item in join_list:
+                for field in item['fields']:
+                    for tn, jn in field.items():
+                            schema_lst.append(jn)
     
+        except Exception as e:
+            raise Exception(f"Error: Could not build schema from source or join list, check data packages.  Traceback: {e}")
+
+
+    #If Source Manually Passed Into Function
+    elif (schema != None) & (source == None) & (join_list == None):
+        schema_lst = schema
+
+    #Filter Schema List
+    if exclude != None:
+        schema_lst = [field for field in schema_lst if field not in exclude]
+
+    #Return Schema List
+    return schema_lst
+
+
+#----------------------------------------------------------------
+
+def build_query(source = None, join_list = None, query = None):
+    
+    #If Source and Join List Passed, Query 
+    if (query == None) & (source != None) & (join_list != None):
+        
+        #Set Count for Join Sections
+        join_count = 1
+
+        #Initialize Query Select
+        query = "SELECT\n"
+
+        #Add Fields from Source
+        try:
+            for field in source['fields']:
+                for tn, jn in field.items():
+                    query += f"    {source['name']}.{tn} AS {jn},\n"
+
+        except Exception as e:
+            raise Exception(f"Error: Could not pull fields from Source, check Source data package.  Traceback: {e}")
+
+
+
+        # Add Fields from Joins
+        try:
+            for index, item in enumerate(join_list):
+                # Add Join Segments
+                for field in item['fields']:
+                    for tn, jn in field.items():
+                        if index == len(join_list) - 1 and field == item['fields'][-1]:
+                            query += f"    {item['name']}.{tn} AS {jn}\n"
+                        else:
+                            query += f"    {item['name']}.{tn} AS {jn},\n"
+
+        except Exception as e:
+            raise Exception(f"Error: Could not pull fields from Join List, check Join List data package.  Traceback: {e}")
+
+
+
+        #Add Source
+        try:
+            query += "\nFROM\n"
+            query += f"    {source['table']} {source['name']}\n"
+        
+        except Exception as e:
+            raise Exception(f"Error: Could not pull source table or name from Source data package.  Traceback: {e}")
+
+
+
+        #Add Joins
+        try:
+            for index, item in enumerate(join_list):
+                
+                if index == 0:
+                    data_conn = 'initial_join_answers'
+                else:
+                    data_conn = f'join_answers_{join_count}'
+                    join_count += 1
+
+                if item['question_source'] == "JOIN_SOURCE":
+                    question_source = source['name']
+
+                elif item['question_source'] == "DATA_SOURCE":
+                    question_source = 'initial_join_answers'
+                
+                query += f"\nLEFT JOIN application_data_answer {data_conn} ON {question_source}.{item['source_id']} = {data_conn}.{item['join_id']} AND {data_conn}.question_id = {item['question_id']}"
+                query += f"\nLEFT JOIN {item['data_source']} {item['name']} ON {data_conn}.id = {item['name']}.answer_ptr_id\n"
+
+        except Exception as e:
+            raise Exception(f"Error: Could not pull join information from join list, check join list data package.  Traceback: {e}")
+
+
+
+        #Filter Project
+        try:
+            query += "\n WHERE \n"
+            query += f"    {source['name']}.project_id = {source['project']}"
+
+        except:
+            raise Exception(f"Error: Could not apply project filter to query.  Traceback: {e}")
+
+
+
+        #Order Project
+        try:
+            query += "\n ORDER BY\n"
+            query += f"{source['name']}.{source['order']};"
+        
+        except:
+            raise Exception(f"Error: Could not apply order operations to query.  Traceback: {e}")
+        
+            
+        #Encode String
+        query = codecs.decode(query.encode(), 'unicode_escape')
+
+
+
+    # If Query Passed, Pass Back Query
+    elif (query != None) & (source == None) & (join_list == None):
+        query = query
+
+
+    #Return Query
+    return query
+
+
+
+
+
+
+
+
+
+
+################    DATA CLEANING FUNCTIONS    ######################
+
+#----------------------------------------------------------------
+
+def clean_empty_none(field, df, removed):
+    
+    #Create Empty DataFrame
+    cleaned_df = pd.DataFrame()
+
+    #Check if Field in Dataframe
+    if field not in df.columns:
+        raise Exception(f"Error: {field} Not In DataFrame")
+
+
+    #Itterate Through DataFrame and Check for Empty Values
+    for index, row in df.iterrows():
+        
+        #Create Add Check for Row
+        add_check = True
+
+        #Check for None or Empty Strings in Row Fields
+        if row[field] == None or row[field] == '':
+            add_check = False
+
+        #If Add Check Still True, Add to Cleaned DataFrame
+        try:
+            if add_check == True:
+                cleaned_df = pd.concat([cleaned_df, pd.DataFrame(row).T])
+
+            elif add_check == False:
+                removed = pd.concat([removed, pd.DataFrame(row).T])
+
+        except Exception as e:
+            raise Exception(f'Error: Failed to Add Row to Cleaned DataFrame {e}')
+
+        
+    return cleaned_df, removed
+
+
+
+
+#----------------------------------------------------------------
+
+def convert_dates(field, df, output_format = None):
+
+    #Check if Field in DataFrame
+    if field not in df.columns:
+        raise Exception(f"Error: {field} Not In DataFrame")
+
+    
+    try:
+        df[field] = pd.to_datetime(df[field])
+        
+        #Convert to String Format if output_format passed
+        if output_format != None:
+            df[field] = df[field].dt.strftime(output_format)
+            
+        return df
+    
+    except Exception as e:
+       raise Exception(f"Error: Could not convert {field} to datetime:  Traceback{e}")
+    
+
+
+
+#----------------------------------------------------------------
+
+def convert_integer(field, df):
+
+    #Check if Field in DataFrame
+    if field not in df.columns:
+        raise Exception(f"Error: {field} Not In DataFrame")
+    
+    try:
+        df[field] = pd.to_numeric(df[field], errors='coerce')
+        return df
+    
+    except Exception as e:
+        raise Exception(f"Error: Could not convert {field} to integer:  Traceback{e}")
+
+
+
+
+#----------------------------------------------------------------
+
+def update_field_names(self, table_fields, new_fields):
+
+        """
+        Update column names in the dataframe.  User provides list of fields that need to be updated in the
+        table and a list of fields names that they need to be updated to.  The fields must match in each list.
+        
+        Parameters:
+        -----------
+        table_fields : list
+            Current column names.
+        new_fields : list
+            New column names.
+        
+        Raises:
+        -------
+        Exception
+            If dataframe is empty or rename fails.
+        """
+        
+        #Create Dictionary for Fields Update
+        field_dict = dict(zip(table_fields, new_fields))
+
+        #Update Fields
+        for table_field, new_field in field_dict.items():
+
+            if self.df.empty == False :
+            
+                try:
+                    #Update the Column Name
+                    self.df.rename(columns={table_field: new_field}, inplace=True)
+
+                except Exception as e:
+                    raise Exception(f"Failure to Convert {table_field} to {new_field}")
+    
+            else:
+                raise Exception("Error: Cannot Rename Columns of Empty Dataframe")
