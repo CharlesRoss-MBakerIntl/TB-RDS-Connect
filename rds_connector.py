@@ -115,7 +115,10 @@ class RDSTablePull:
         #Create Schema, Query, and Clean List
         self.schema = build_schema(source = self.source, join_list = self.join_list, schema = schema, exclude = exclude)
         self.query = build_query(query = query, source = self.source, join_list = self.join_list)
-        self.clean_list = build_clean_list(join_list = self.join_list)
+
+        #Build Clean List if Query Package Not Empty
+        if query_package != None:
+            self.clean_list = build_clean_list(join_list = self.join_list)
 
         #Store Empty Variables for Later Use
         self.df = pd.DataFrame()
