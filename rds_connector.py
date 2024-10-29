@@ -97,29 +97,21 @@ class RDSTablePull:
     """
 
 
-    def __init__(self, conn, cursor, query = None, query_package = None, schema = None, exclude = None):
+    def __init__(self, conn, cursor, query_package = None, schema = None, exclude = None, query = None, ):
         
         #Store Connector and Query Package 
         self.conn = conn
         self.cursor = cursor
         self.query_package = query_package
 
-        #Store Source and Join List Based on Query Package
-        if query_package == None:
-            self.source = None
-            self.join_list = None
-        else:
-            self.source = query_package["source"]
-            self.join_list = query_package["join_list"]
+        #Unpack the Query
+        self.source, self.join_list = unpack_query(query_package)
 
         #Create Schema, Query, and Clean List
         self.schema = build_schema(source = self.source, join_list = self.join_list, schema = schema, exclude = exclude)
         self.query = build_query(query = query, source = self.source, join_list = self.join_list)
-
-        #Build Clean List if Query Package Not Empty
-        if query_package != None:
-            self.clean_list = build_clean_list(join_list = self.join_list)
-
+        self.clean_list = build_clean_list(join_list = self.join_list)
+     
         #Store Empty Variables for Later Use
         self.df = pd.DataFrame()
         self.removed = pd.DataFrame()
@@ -353,6 +345,41 @@ def rds_sql_pull(cursor, query):
 
         # Raise Exception to Stop Process if Failure
         raise Exception(f"Failed to Pull Rows from Cursor Query Execute: {e}")
+    
+
+
+
+
+#----------------------------------------------------------------
+
+def unpack_query(query_package):
+
+    #If Join List NOT Empty
+    if query_package != None:
+        
+        if 'source' in query_package:
+            source = query_package["source"]
+        else:
+            source = None
+            raise Exception("Query Package Exists, but Not Source Component Identified")
+        
+        if 'join_list' in query_package:
+            join_list = query_package["join_list"]
+        else:
+            source = None
+            raise Exception("Query Package Exists, but Not Join List Component Identified")    
+                           
+    #Join List Empty           
+    else:
+        source = None
+        join_list = None     
+
+
+    #Return Clean List
+    return source, join_list
+
+
+
 
 
 
@@ -360,44 +387,49 @@ def rds_sql_pull(cursor, query):
 
 def build_clean_list(join_list):
 
-    #Create Clean Dictionary
-    clean_dict = {
-    'NULL' : clean_empty_none,
-    'DATE_CONVERT': convert_dates,
-    'INT_CONVERT': convert_integer
-    }
+    #If Join List NOT Empty
+    if join_list != None:
 
-    #Create Clean List
-    clean_list = []
+        #Create Clean Dictionary
+        clean_dict = {
+        'NULL' : clean_empty_none,
+        'DATE_CONVERT': convert_dates,
+        'INT_CONVERT': convert_integer
+        }
 
-    # Cycle Through Clean Lists
-    for item in join_list:
-        for field in item['clean']:
-            for name, calcs in field.items():
-                for calc in calcs:
+        #Create Clean List
+        clean_list = []
+
+        # Cycle Through Clean Lists
+        for item in join_list:
+            for field in item['clean']:
+                for name, calcs in field.items():
+                    for calc in calcs:
+                        
+                        #Attempt to Pull the Function Step from the Dictionary
+                        try:
+
+                            #If Calc in Dictionary
+                            if (clean_dict[calc] != None):
+                                
+                                #Create Entry from Dictionary
+                                entry = {'field': name,
+                                        'function': clean_dict[calc]}
+
+                                #Add to Clean List
+                                clean_list.append(entry)
+
                     
-                    #Attempt to Pull the Function Step from the Dictionary
-                    try:
+                            #If Calc not in Dictionary
+                            elif (clean_dict[calc] == None):
+                                raise Exception(f'Error: {calc} did not match any function in the function dictionary.')
 
-                        #If Calc in Dictionary
-                        if (clean_dict[calc] != None):
-                            
-                            #Create Entry from Dictionary
-                            entry = {'field': name,
-                                     'function': clean_dict[calc]}
+                        except Exception as e:
+                            raise Exception(f"Error: Could not add calc entry to clean list.  Traceback:{e}")  
 
-                            #Add to Clean List
-                            clean_list.append(entry)
-
-                
-                        #If Calc not in Dictionary
-                        elif (clean_dict[calc] == None):
-                            raise Exception(f'Error: {calc} did not match any function in the function dictionary.')
-
-                    except Exception as e:
-                        raise Exception(f"Error: Could not add calc entry to clean list.  Traceback:{e}")  
-                    
-             
+    #Join List Empty           
+    else:
+        clean_list = []        
 
 
     #Return Clean List
