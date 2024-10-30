@@ -97,7 +97,7 @@ class RDSTablePull:
     """
 
 
-    def __init__(self, conn, cursor, query_package = None, schema = None, exclude = None, query = None, ):
+    def __init__(self, conn, cursor, query_package = None, auto = True, schema = None, exclude = None, query = None):
         
         #Store Connector and Query Package 
         self.conn = conn
@@ -113,10 +113,19 @@ class RDSTablePull:
         self.clean_list = build_clean_list(join_list = self.join_list)
      
         #Store Empty Variables for Later Use
-        self.df = pd.DataFrame()
         self.removed = pd.DataFrame()
         self.cleaning_versions = []
         self.fields_missing = []
+
+        #If Automatically Generate Data is set to True, Generate Data
+        if auto == True:
+            self.df = self.query_to_df()
+
+        #If Automatically Generate Data is set to False, Let DF be blank till query is called
+        elif auto == False:
+            self.df = pd.DataFrame()
+
+        
         
 
 
