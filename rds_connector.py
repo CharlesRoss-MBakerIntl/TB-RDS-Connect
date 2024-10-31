@@ -63,7 +63,7 @@ def rds_connection(username, password, db, server):
 
 #----------------------------------------------------------------
 
-class RDSTablePull:
+class RDS:
     
     """
     RDSTablePull is a class to handle database queries and data schema validation.
