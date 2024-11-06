@@ -272,6 +272,9 @@ class RDS:
             if data.empty == False:
                 #Check Schema
                 if self.check_schema(data):
+
+                    #Drop Duplicate Data
+                    data = data.drop_duplicates()
                     
                     #Update DF with Data
                     self.df = data
@@ -279,6 +282,7 @@ class RDS:
                     #If Selected, Update Columns
                     if clean == True:
                         self.df = self.clean_table(data)
+
 
                     #Return DataFrame
                     return self.df
